@@ -1,0 +1,539 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:standard="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
+  <uml:Model xmi:id="_lEDscI5kEe2IcvekkDNWCg" name="Car">
+    <packageImport xmi:id="_lEg_cI5kEe2IcvekkDNWCg">
+      <importedPackage xmi:type="uml:Model" href="pathmap://TXTUML_STDLIB/stdlib.uml#_DE5UMHLCEeWVx4ZuxFlarQ"/>
+    </packageImport>
+    <packageImport xmi:id="_lE1IgI5kEe2IcvekkDNWCg">
+      <importedPackage xmi:type="uml:Profile" href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Package" xmi:id="_lKwxYI5kEe2IcvekkDNWCg" name="association">
+      <packagedElement xmi:type="uml:Association" xmi:id="_lKymkI5kEe2IcvekkDNWCg" name="GL" memberEnd="_lKz0sI5kEe2IcvekkDNWCg _lK2Q8I5kEe2IcvekkDNWCg"/>
+      <packagedElement xmi:type="uml:Association" xmi:id="_lK4tMI5kEe2IcvekkDNWCg" name="LE" memberEnd="_lK5UQI5kEe2IcvekkDNWCg _lK5UQ45kEe2IcvekkDNWCg"/>
+      <packagedElement xmi:type="uml:Association" xmi:id="_lK7JcI5kEe2IcvekkDNWCg" name="GE" memberEnd="_lK7JcY5kEe2IcvekkDNWCg _lK7wgY5kEe2IcvekkDNWCg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_lH8G4I5kEe2IcvekkDNWCg" name="Engine" classifierBehavior="_lIL-gI5kEe2IcvekkDNWCg">
+      <ownedAttribute xmi:id="_lK5UQI5kEe2IcvekkDNWCg" name="l" type="_lIYLwI5kEe2IcvekkDNWCg" association="_lK4tMI5kEe2IcvekkDNWCg">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_lK5UQY5kEe2IcvekkDNWCg" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_lK5UQo5kEe2IcvekkDNWCg" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_lK7JcY5kEe2IcvekkDNWCg" name="g" type="_lIgHkI5kEe2IcvekkDNWCg" association="_lK7JcI5kEe2IcvekkDNWCg">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_lK7Jco5kEe2IcvekkDNWCg" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_lK7wgI5kEe2IcvekkDNWCg" value="1"/>
+      </ownedAttribute>
+      <ownedBehavior xmi:type="uml:Activity" xmi:id="_lII7MI5kEe2IcvekkDNWCg" name="Engine" specification="_lIAYUI5kEe2IcvekkDNWCg"/>
+      <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_lIL-gI5kEe2IcvekkDNWCg" name="Engine">
+        <region xmi:id="_lIMlkI5kEe2IcvekkDNWCg" name="Engine">
+          <transition xmi:id="_lISFIY5kEe2IcvekkDNWCg" name="Init_Stopped" source="_lIPo4I5kEe2IcvekkDNWCg" target="_lIQP8I5kEe2IcvekkDNWCg"/>
+          <transition xmi:id="_lIUhYI5kEe2IcvekkDNWCg" name="Stopped_Working" source="_lIQP8I5kEe2IcvekkDNWCg" target="_lISFII5kEe2IcvekkDNWCg">
+            <trigger xmi:id="_lIVIcI5kEe2IcvekkDNWCg" name="null_trigger" event="_lLBQEY5kEe2IcvekkDNWCg"/>
+          </transition>
+          <transition xmi:id="_lIVvgI5kEe2IcvekkDNWCg" name="Working_Stopped" source="_lISFII5kEe2IcvekkDNWCg" target="_lIQP8I5kEe2IcvekkDNWCg">
+            <trigger xmi:id="_lIWWkI5kEe2IcvekkDNWCg" name="null_trigger" event="_lLFhgY5kEe2IcvekkDNWCg"/>
+          </transition>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_lIPo4I5kEe2IcvekkDNWCg" name="Init"/>
+          <subvertex xmi:type="uml:State" xmi:id="_lIQP8I5kEe2IcvekkDNWCg" name="Stopped"/>
+          <subvertex xmi:type="uml:State" xmi:id="_lISFII5kEe2IcvekkDNWCg" name="Working"/>
+        </region>
+      </ownedBehavior>
+      <ownedOperation xmi:id="_lIAYUI5kEe2IcvekkDNWCg" name="Engine" method="_lII7MI5kEe2IcvekkDNWCg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_lIYLwI5kEe2IcvekkDNWCg" name="Lamp" classifierBehavior="_lIZZ4Y5kEe2IcvekkDNWCg">
+      <ownedAttribute xmi:id="_lKz0sI5kEe2IcvekkDNWCg" name="g" type="_lIgHkI5kEe2IcvekkDNWCg" association="_lKymkI5kEe2IcvekkDNWCg">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_lK1C0I5kEe2IcvekkDNWCg" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_lK1p4I5kEe2IcvekkDNWCg" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_lK5UQ45kEe2IcvekkDNWCg" name="e" type="_lH8G4I5kEe2IcvekkDNWCg" association="_lK4tMI5kEe2IcvekkDNWCg">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_lK5URI5kEe2IcvekkDNWCg" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_lK5URY5kEe2IcvekkDNWCg" value="1"/>
+      </ownedAttribute>
+      <ownedBehavior xmi:type="uml:Activity" xmi:id="_lIZZ4I5kEe2IcvekkDNWCg" name="Lamp" specification="_lIYy0I5kEe2IcvekkDNWCg"/>
+      <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_lIZZ4Y5kEe2IcvekkDNWCg" name="Lamp">
+        <region xmi:id="_lIZZ4o5kEe2IcvekkDNWCg" name="Lamp">
+          <transition xmi:id="_lIaA8I5kEe2IcvekkDNWCg" name="Init_Dark" source="_lIZZ445kEe2IcvekkDNWCg" target="_lIZZ5I5kEe2IcvekkDNWCg"/>
+          <transition xmi:id="_lIaA8Y5kEe2IcvekkDNWCg" name="Dark_Light" source="_lIZZ5I5kEe2IcvekkDNWCg" target="_lIZZ5Y5kEe2IcvekkDNWCg">
+            <trigger xmi:id="_lIaoAI5kEe2IcvekkDNWCg" name="null_trigger" event="_lLETYY5kEe2IcvekkDNWCg"/>
+          </transition>
+          <transition xmi:id="_lIaoAY5kEe2IcvekkDNWCg" name="Light_Dark" source="_lIZZ5Y5kEe2IcvekkDNWCg" target="_lIZZ5I5kEe2IcvekkDNWCg">
+            <trigger xmi:id="_lIaoAo5kEe2IcvekkDNWCg" name="null_trigger" event="_lLETYY5kEe2IcvekkDNWCg"/>
+          </transition>
+          <transition xmi:id="_lIaoA45kEe2IcvekkDNWCg" name="Light_Dark2" source="_lIZZ5Y5kEe2IcvekkDNWCg" target="_lIZZ5I5kEe2IcvekkDNWCg">
+            <trigger xmi:id="_lIbPEI5kEe2IcvekkDNWCg" name="null_trigger" event="_lK9lsI5kEe2IcvekkDNWCg"/>
+          </transition>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_lIZZ445kEe2IcvekkDNWCg" name="Init"/>
+          <subvertex xmi:type="uml:State" xmi:id="_lIZZ5I5kEe2IcvekkDNWCg" name="Dark"/>
+          <subvertex xmi:type="uml:State" xmi:id="_lIZZ5Y5kEe2IcvekkDNWCg" name="Light"/>
+        </region>
+      </ownedBehavior>
+      <ownedOperation xmi:id="_lIYy0I5kEe2IcvekkDNWCg" name="Lamp" method="_lIZZ4I5kEe2IcvekkDNWCg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_lIgHkI5kEe2IcvekkDNWCg" name="Gearbox" classifierBehavior="_lKUFdI5kEe2IcvekkDNWCg">
+      <ownedAttribute xmi:id="_lK2Q8I5kEe2IcvekkDNWCg" name="l" type="_lIYLwI5kEe2IcvekkDNWCg" association="_lKymkI5kEe2IcvekkDNWCg">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_lK3fEI5kEe2IcvekkDNWCg" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_lK3fEY5kEe2IcvekkDNWCg" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_lK7wgY5kEe2IcvekkDNWCg" name="e" type="_lH8G4I5kEe2IcvekkDNWCg" association="_lK7JcI5kEe2IcvekkDNWCg">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_lK7wgo5kEe2IcvekkDNWCg" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_lK7wg45kEe2IcvekkDNWCg" value="1"/>
+      </ownedAttribute>
+      <ownedBehavior xmi:type="uml:Activity" xmi:id="_lIqfoI5kEe2IcvekkDNWCg" name="Gearbox" specification="_lIoqcI5kEe2IcvekkDNWCg"/>
+      <ownedBehavior xmi:type="uml:Activity" xmi:id="_lIrGsI5kEe2IcvekkDNWCg" name="startEngineOp" specification="_lIguoI5kEe2IcvekkDNWCg" node="_lJEIQI5kEe2IcvekkDNWCg _lJQVgI5kEe2IcvekkDNWCg _lJRjoI5kEe2IcvekkDNWCg _lKRCII5kEe2IcvekkDNWCg _lKS3UI5kEe2IcvekkDNWCg">
+        <edge xmi:type="uml:ControlFlow" xmi:id="_lKUFcI5kEe2IcvekkDNWCg" name="#init~~>null" target="_lJQVgI5kEe2IcvekkDNWCg" source="_lJEIQI5kEe2IcvekkDNWCg"/>
+        <edge xmi:type="uml:ControlFlow" xmi:id="_lKUFcY5kEe2IcvekkDNWCg" name="null~~>#body" target="_lJRjoI5kEe2IcvekkDNWCg" source="_lJQVgI5kEe2IcvekkDNWCg"/>
+        <edge xmi:type="uml:ControlFlow" xmi:id="_lKUFco5kEe2IcvekkDNWCg" name="#body~~>#finish" target="_lKRCII5kEe2IcvekkDNWCg" source="_lJRjoI5kEe2IcvekkDNWCg"/>
+        <edge xmi:type="uml:ControlFlow" xmi:id="_lKUFc45kEe2IcvekkDNWCg" name="#finish~~>#final" target="_lKS3UI5kEe2IcvekkDNWCg" source="_lKRCII5kEe2IcvekkDNWCg"/>
+        <node xmi:type="uml:InitialNode" xmi:id="_lJEIQI5kEe2IcvekkDNWCg" name="#init" outgoing="_lKUFcI5kEe2IcvekkDNWCg"/>
+        <node xmi:type="uml:SequenceNode" xmi:id="_lJQVgI5kEe2IcvekkDNWCg" incoming="_lKUFcI5kEe2IcvekkDNWCg" outgoing="_lKUFcY5kEe2IcvekkDNWCg"/>
+        <node xmi:type="uml:SequenceNode" xmi:id="_lJRjoI5kEe2IcvekkDNWCg" name="#body" incoming="_lKUFcY5kEe2IcvekkDNWCg" outgoing="_lKUFco5kEe2IcvekkDNWCg">
+          <edge xmi:type="uml:ObjectFlow" xmi:id="_lJ-HMI5kEe2IcvekkDNWCg" name="this==>this" target="_lJ-uQ45kEe2IcvekkDNWCg" source="_lJ5OsI5kEe2IcvekkDNWCg"/>
+          <edge xmi:type="uml:ObjectFlow" xmi:id="_lJ_VUI5kEe2IcvekkDNWCg" name="this -> e==>selected" target="_lJ_8YI5kEe2IcvekkDNWCg" source="_lJ-uQI5kEe2IcvekkDNWCg"/>
+          <edge xmi:type="uml:ObjectFlow" xmi:id="_lKC_sI5kEe2IcvekkDNWCg" name="select(this -> e)==>new_value" target="_lKDmwY5kEe2IcvekkDNWCg" source="_lJ_8YY5kEe2IcvekkDNWCg"/>
+          <variable xmi:id="_lJXDMI5kEe2IcvekkDNWCg" name="e" type="_lH8G4I5kEe2IcvekkDNWCg"/>
+          <executableNode xmi:type="uml:ReadSelfAction" xmi:id="_lJ5OsI5kEe2IcvekkDNWCg" name="this" outgoing="_lJ-HMI5kEe2IcvekkDNWCg">
+            <result xmi:id="_lJ5OsY5kEe2IcvekkDNWCg" name="this" type="_lIgHkI5kEe2IcvekkDNWCg"/>
+          </executableNode>
+          <executableNode xmi:type="uml:ReadLinkAction" xmi:id="_lJ-uQI5kEe2IcvekkDNWCg" name="this -> e" outgoing="_lJ_VUI5kEe2IcvekkDNWCg">
+            <endData xmi:id="_lJ-uQY5kEe2IcvekkDNWCg" end="_lK7JcY5kEe2IcvekkDNWCg" value="_lJ-uQ45kEe2IcvekkDNWCg"/>
+            <endData xmi:id="_lJ-uQo5kEe2IcvekkDNWCg" end="_lK7wgY5kEe2IcvekkDNWCg"/>
+            <inputValue xmi:id="_lJ-uQ45kEe2IcvekkDNWCg" name="this" incoming="_lJ-HMI5kEe2IcvekkDNWCg"/>
+            <result xmi:id="_lJ-uRI5kEe2IcvekkDNWCg"/>
+          </executableNode>
+          <executableNode xmi:type="uml:CallOperationAction" xmi:id="_lJ_VUY5kEe2IcvekkDNWCg" name="select(this -> e)">
+            <argument xmi:id="_lJ_8YI5kEe2IcvekkDNWCg" name="selected" incoming="_lJ_VUI5kEe2IcvekkDNWCg"/>
+            <result xmi:id="_lJ_8YY5kEe2IcvekkDNWCg" name="select(this -> e)" outgoing="_lKC_sI5kEe2IcvekkDNWCg"/>
+            <operation href="pathmap://TXTUML_STDLIB/stdlib.uml#_dS_o0AY7Eeae1rX0uG0rnw"/>
+          </executableNode>
+          <executableNode xmi:type="uml:AddVariableValueAction" xmi:id="_lKDmwI5kEe2IcvekkDNWCg" name="e=select(this -> e)" variable="_lJXDMI5kEe2IcvekkDNWCg" isReplaceAll="true">
+            <value xmi:id="_lKDmwY5kEe2IcvekkDNWCg" name="new_value" incoming="_lKC_sI5kEe2IcvekkDNWCg" type="_lH8G4I5kEe2IcvekkDNWCg"/>
+          </executableNode>
+          <executableNode xmi:type="uml:SequenceNode" xmi:id="_lKDmwo5kEe2IcvekkDNWCg"/>
+          <executableNode xmi:type="uml:SequenceNode" xmi:id="_lKQbEI5kEe2IcvekkDNWCg" name="send create EngineOn to e;">
+            <edge xmi:type="uml:ObjectFlow" xmi:id="_lKQbEY5kEe2IcvekkDNWCg" name="create EngineOn==>signal_to_send" target="_lKQbJI5kEe2IcvekkDNWCg" source="_lKQbE45kEe2IcvekkDNWCg"/>
+            <edge xmi:type="uml:ObjectFlow" xmi:id="_lKQbEo5kEe2IcvekkDNWCg" name="e==>receiver" target="_lKQbJY5kEe2IcvekkDNWCg" source="_lKQbIY5kEe2IcvekkDNWCg"/>
+            <executableNode xmi:type="uml:SequenceNode" xmi:id="_lKQbE45kEe2IcvekkDNWCg" name="create EngineOn" outgoing="_lKQbEY5kEe2IcvekkDNWCg">
+              <edge xmi:type="uml:ObjectFlow" xmi:id="_lKQbFI5kEe2IcvekkDNWCg" name="instantiate EngineOn==>new_value" target="_lKQbGo5kEe2IcvekkDNWCg" source="_lKQbGI5kEe2IcvekkDNWCg"/>
+              <edge xmi:type="uml:ObjectFlow" xmi:id="_lKQbFY5kEe2IcvekkDNWCg" name="#temp==>p0" target="_lKQbHo5kEe2IcvekkDNWCg" source="_lKQbHI5kEe2IcvekkDNWCg"/>
+              <variable xmi:id="_lKQbFo5kEe2IcvekkDNWCg" name="#temp" type="_lLBQEI5kEe2IcvekkDNWCg"/>
+              <executableNode xmi:type="uml:CreateObjectAction" xmi:id="_lKQbF45kEe2IcvekkDNWCg" name="instantiate EngineOn" classifier="_lLBQEI5kEe2IcvekkDNWCg">
+                <result xmi:id="_lKQbGI5kEe2IcvekkDNWCg" name="instantiate EngineOn" outgoing="_lKQbFI5kEe2IcvekkDNWCg" type="_lLBQEI5kEe2IcvekkDNWCg"/>
+              </executableNode>
+              <executableNode xmi:type="uml:AddVariableValueAction" xmi:id="_lKQbGY5kEe2IcvekkDNWCg" name="#temp=instantiate EngineOn" variable="_lKQbFo5kEe2IcvekkDNWCg" isReplaceAll="true">
+                <value xmi:id="_lKQbGo5kEe2IcvekkDNWCg" name="new_value" incoming="_lKQbFI5kEe2IcvekkDNWCg" type="_lLBQEI5kEe2IcvekkDNWCg"/>
+              </executableNode>
+              <executableNode xmi:type="uml:ReadVariableAction" xmi:id="_lKQbG45kEe2IcvekkDNWCg" name="#temp" variable="_lKQbFo5kEe2IcvekkDNWCg">
+                <result xmi:id="_lKQbHI5kEe2IcvekkDNWCg" name="#temp" outgoing="_lKQbFY5kEe2IcvekkDNWCg" type="_lLBQEI5kEe2IcvekkDNWCg"/>
+              </executableNode>
+              <executableNode xmi:type="uml:CallOperationAction" xmi:id="_lKQbHY5kEe2IcvekkDNWCg" name="EngineOn( p0)" operation="_lLBQE45kEe2IcvekkDNWCg">
+                <argument xmi:id="_lKQbHo5kEe2IcvekkDNWCg" name="p0" incoming="_lKQbFY5kEe2IcvekkDNWCg" type="_lLBQEI5kEe2IcvekkDNWCg"/>
+              </executableNode>
+              <executableNode xmi:type="uml:ReadVariableAction" xmi:id="_lKQbH45kEe2IcvekkDNWCg" name="#temp" variable="_lKQbFo5kEe2IcvekkDNWCg">
+                <result xmi:id="_lKQbII5kEe2IcvekkDNWCg" name="#temp" type="_lLBQEI5kEe2IcvekkDNWCg"/>
+              </executableNode>
+            </executableNode>
+            <executableNode xmi:type="uml:ReadVariableAction" xmi:id="_lKQbIY5kEe2IcvekkDNWCg" name="e" outgoing="_lKQbEo5kEe2IcvekkDNWCg" variable="_lJXDMI5kEe2IcvekkDNWCg">
+              <result xmi:id="_lKQbIo5kEe2IcvekkDNWCg" name="e" type="_lH8G4I5kEe2IcvekkDNWCg"/>
+            </executableNode>
+            <executableNode xmi:type="uml:SendObjectAction" xmi:id="_lKQbI45kEe2IcvekkDNWCg" name="send create EngineOn to e">
+              <request xmi:id="_lKQbJI5kEe2IcvekkDNWCg" name="signal_to_send" incoming="_lKQbEY5kEe2IcvekkDNWCg" type="_lLBQEI5kEe2IcvekkDNWCg"/>
+              <target xmi:id="_lKQbJY5kEe2IcvekkDNWCg" name="receiver" incoming="_lKQbEo5kEe2IcvekkDNWCg" type="_lH8G4I5kEe2IcvekkDNWCg"/>
+            </executableNode>
+          </executableNode>
+        </node>
+        <node xmi:type="uml:SequenceNode" xmi:id="_lKRCII5kEe2IcvekkDNWCg" name="#finish" incoming="_lKUFco5kEe2IcvekkDNWCg" outgoing="_lKUFc45kEe2IcvekkDNWCg"/>
+        <node xmi:type="uml:ActivityFinalNode" xmi:id="_lKS3UI5kEe2IcvekkDNWCg" name="#final" incoming="_lKUFc45kEe2IcvekkDNWCg"/>
+      </ownedBehavior>
+      <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_lKUFdI5kEe2IcvekkDNWCg" name="Gearbox">
+        <region xmi:id="_lKUsgI5kEe2IcvekkDNWCg" name="Gearbox">
+          <transition xmi:id="_lKXv0o5kEe2IcvekkDNWCg" name="Init_Neutral" source="_lKUsgY5kEe2IcvekkDNWCg" target="_lKUsgo5kEe2IcvekkDNWCg"/>
+          <transition xmi:id="_lKYW4I5kEe2IcvekkDNWCg" name="Neutral_Forwards" source="_lKUsgo5kEe2IcvekkDNWCg" target="_lKUsg45kEe2IcvekkDNWCg">
+            <effect xmi:type="uml:Activity" xmi:id="_lKY98I5kEe2IcvekkDNWCg" name="effect" node="_lKZlAI5kEe2IcvekkDNWCg _lKZlAY5kEe2IcvekkDNWCg _lKZlAo5kEe2IcvekkDNWCg _lKaMFo5kEe2IcvekkDNWCg _lKazII5kEe2IcvekkDNWCg">
+              <edge xmi:type="uml:ControlFlow" xmi:id="_lKazIY5kEe2IcvekkDNWCg" name="#init~~>null" target="_lKZlAY5kEe2IcvekkDNWCg" source="_lKZlAI5kEe2IcvekkDNWCg"/>
+              <edge xmi:type="uml:ControlFlow" xmi:id="_lKazIo5kEe2IcvekkDNWCg" name="null~~>#body" target="_lKZlAo5kEe2IcvekkDNWCg" source="_lKZlAY5kEe2IcvekkDNWCg"/>
+              <edge xmi:type="uml:ControlFlow" xmi:id="_lKazI45kEe2IcvekkDNWCg" name="#body~~>#finish" target="_lKaMFo5kEe2IcvekkDNWCg" source="_lKZlAo5kEe2IcvekkDNWCg"/>
+              <edge xmi:type="uml:ControlFlow" xmi:id="_lKazJI5kEe2IcvekkDNWCg" name="#finish~~>#final" target="_lKazII5kEe2IcvekkDNWCg" source="_lKaMFo5kEe2IcvekkDNWCg"/>
+              <node xmi:type="uml:InitialNode" xmi:id="_lKZlAI5kEe2IcvekkDNWCg" name="#init" outgoing="_lKazIY5kEe2IcvekkDNWCg"/>
+              <node xmi:type="uml:SequenceNode" xmi:id="_lKZlAY5kEe2IcvekkDNWCg" incoming="_lKazIY5kEe2IcvekkDNWCg" outgoing="_lKazIo5kEe2IcvekkDNWCg"/>
+              <node xmi:type="uml:SequenceNode" xmi:id="_lKZlAo5kEe2IcvekkDNWCg" name="#body" incoming="_lKazIo5kEe2IcvekkDNWCg" outgoing="_lKazI45kEe2IcvekkDNWCg">
+                <executableNode xmi:type="uml:SequenceNode" xmi:id="_lKaMEI5kEe2IcvekkDNWCg" name="this.startEngineOp();">
+                  <edge xmi:type="uml:ObjectFlow" xmi:id="_lKaMEY5kEe2IcvekkDNWCg" name="this==>target" target="_lKaMFY5kEe2IcvekkDNWCg" source="_lKaME45kEe2IcvekkDNWCg"/>
+                  <executableNode xmi:type="uml:ReadSelfAction" xmi:id="_lKaMEo5kEe2IcvekkDNWCg" name="this">
+                    <result xmi:id="_lKaME45kEe2IcvekkDNWCg" name="this" outgoing="_lKaMEY5kEe2IcvekkDNWCg" type="_lIgHkI5kEe2IcvekkDNWCg"/>
+                  </executableNode>
+                  <executableNode xmi:type="uml:CallOperationAction" xmi:id="_lKaMFI5kEe2IcvekkDNWCg" name="this.startEngineOp()" operation="_lIguoI5kEe2IcvekkDNWCg">
+                    <target xmi:id="_lKaMFY5kEe2IcvekkDNWCg" name="target" incoming="_lKaMEY5kEe2IcvekkDNWCg" type="_lIgHkI5kEe2IcvekkDNWCg"/>
+                  </executableNode>
+                </executableNode>
+              </node>
+              <node xmi:type="uml:SequenceNode" xmi:id="_lKaMFo5kEe2IcvekkDNWCg" name="#finish" incoming="_lKazI45kEe2IcvekkDNWCg" outgoing="_lKazJI5kEe2IcvekkDNWCg"/>
+              <node xmi:type="uml:ActivityFinalNode" xmi:id="_lKazII5kEe2IcvekkDNWCg" name="#final" incoming="_lKazJI5kEe2IcvekkDNWCg"/>
+            </effect>
+            <trigger xmi:id="_lKYW4Y5kEe2IcvekkDNWCg" name="null_trigger" event="_lLGvoI5kEe2IcvekkDNWCg"/>
+          </transition>
+          <transition xmi:id="_lKazJY5kEe2IcvekkDNWCg" name="Neutral_Backwards" source="_lKUsgo5kEe2IcvekkDNWCg" target="_lKWhsY5kEe2IcvekkDNWCg">
+            <effect xmi:type="uml:Activity" xmi:id="_lKazJ45kEe2IcvekkDNWCg" name="effect" node="_lKazKI5kEe2IcvekkDNWCg _lKbaMI5kEe2IcvekkDNWCg _lKbaMY5kEe2IcvekkDNWCg _lKcBRo5kEe2IcvekkDNWCg _lKcBR45kEe2IcvekkDNWCg">
+              <edge xmi:type="uml:ControlFlow" xmi:id="_lKcBSI5kEe2IcvekkDNWCg" name="#init~~>null" target="_lKbaMI5kEe2IcvekkDNWCg" source="_lKazKI5kEe2IcvekkDNWCg"/>
+              <edge xmi:type="uml:ControlFlow" xmi:id="_lKcoUI5kEe2IcvekkDNWCg" name="null~~>#body" target="_lKbaMY5kEe2IcvekkDNWCg" source="_lKbaMI5kEe2IcvekkDNWCg"/>
+              <edge xmi:type="uml:ControlFlow" xmi:id="_lKcoUY5kEe2IcvekkDNWCg" name="#body~~>#finish" target="_lKcBRo5kEe2IcvekkDNWCg" source="_lKbaMY5kEe2IcvekkDNWCg"/>
+              <edge xmi:type="uml:ControlFlow" xmi:id="_lKcoUo5kEe2IcvekkDNWCg" name="#finish~~>#final" target="_lKcBR45kEe2IcvekkDNWCg" source="_lKcBRo5kEe2IcvekkDNWCg"/>
+              <node xmi:type="uml:InitialNode" xmi:id="_lKazKI5kEe2IcvekkDNWCg" name="#init" outgoing="_lKcBSI5kEe2IcvekkDNWCg"/>
+              <node xmi:type="uml:SequenceNode" xmi:id="_lKbaMI5kEe2IcvekkDNWCg" incoming="_lKcBSI5kEe2IcvekkDNWCg" outgoing="_lKcoUI5kEe2IcvekkDNWCg"/>
+              <node xmi:type="uml:SequenceNode" xmi:id="_lKbaMY5kEe2IcvekkDNWCg" name="#body" incoming="_lKcoUI5kEe2IcvekkDNWCg" outgoing="_lKcoUY5kEe2IcvekkDNWCg">
+                <executableNode xmi:type="uml:SequenceNode" xmi:id="_lKcBQI5kEe2IcvekkDNWCg" name="this.startEngineOp();">
+                  <edge xmi:type="uml:ObjectFlow" xmi:id="_lKcBQY5kEe2IcvekkDNWCg" name="this==>target" target="_lKcBRY5kEe2IcvekkDNWCg" source="_lKcBQ45kEe2IcvekkDNWCg"/>
+                  <executableNode xmi:type="uml:ReadSelfAction" xmi:id="_lKcBQo5kEe2IcvekkDNWCg" name="this">
+                    <result xmi:id="_lKcBQ45kEe2IcvekkDNWCg" name="this" outgoing="_lKcBQY5kEe2IcvekkDNWCg" type="_lIgHkI5kEe2IcvekkDNWCg"/>
+                  </executableNode>
+                  <executableNode xmi:type="uml:CallOperationAction" xmi:id="_lKcBRI5kEe2IcvekkDNWCg" name="this.startEngineOp()" operation="_lIguoI5kEe2IcvekkDNWCg">
+                    <target xmi:id="_lKcBRY5kEe2IcvekkDNWCg" name="target" incoming="_lKcBQY5kEe2IcvekkDNWCg" type="_lIgHkI5kEe2IcvekkDNWCg"/>
+                  </executableNode>
+                </executableNode>
+              </node>
+              <node xmi:type="uml:SequenceNode" xmi:id="_lKcBRo5kEe2IcvekkDNWCg" name="#finish" incoming="_lKcoUY5kEe2IcvekkDNWCg" outgoing="_lKcoUo5kEe2IcvekkDNWCg"/>
+              <node xmi:type="uml:ActivityFinalNode" xmi:id="_lKcBR45kEe2IcvekkDNWCg" name="#final" incoming="_lKcoUo5kEe2IcvekkDNWCg"/>
+            </effect>
+            <trigger xmi:id="_lKazJo5kEe2IcvekkDNWCg" name="null_trigger" event="_lLCeMY5kEe2IcvekkDNWCg"/>
+          </transition>
+          <transition xmi:id="_lKcoU45kEe2IcvekkDNWCg" name="Forwards_Neutral" source="_lKUsg45kEe2IcvekkDNWCg" target="_lKUsgo5kEe2IcvekkDNWCg">
+            <effect xmi:type="uml:Activity" xmi:id="_lKdPYI5kEe2IcvekkDNWCg" name="effect" node="_lKdPYY5kEe2IcvekkDNWCg _lKdPYo5kEe2IcvekkDNWCg _lKdPY45kEe2IcvekkDNWCg _lKg51o5kEe2IcvekkDNWCg _lKg5145kEe2IcvekkDNWCg">
+              <edge xmi:type="uml:ControlFlow" xmi:id="_lKg52I5kEe2IcvekkDNWCg" name="#init~~>null" target="_lKdPYo5kEe2IcvekkDNWCg" source="_lKdPYY5kEe2IcvekkDNWCg"/>
+              <edge xmi:type="uml:ControlFlow" xmi:id="_lKg52Y5kEe2IcvekkDNWCg" name="null~~>#body" target="_lKdPY45kEe2IcvekkDNWCg" source="_lKdPYo5kEe2IcvekkDNWCg"/>
+              <edge xmi:type="uml:ControlFlow" xmi:id="_lKhg0I5kEe2IcvekkDNWCg" name="#body~~>#finish" target="_lKg51o5kEe2IcvekkDNWCg" source="_lKdPY45kEe2IcvekkDNWCg"/>
+              <edge xmi:type="uml:ControlFlow" xmi:id="_lKhg0Y5kEe2IcvekkDNWCg" name="#finish~~>#final" target="_lKg5145kEe2IcvekkDNWCg" source="_lKg51o5kEe2IcvekkDNWCg"/>
+              <node xmi:type="uml:InitialNode" xmi:id="_lKdPYY5kEe2IcvekkDNWCg" name="#init" outgoing="_lKg52I5kEe2IcvekkDNWCg"/>
+              <node xmi:type="uml:SequenceNode" xmi:id="_lKdPYo5kEe2IcvekkDNWCg" incoming="_lKg52I5kEe2IcvekkDNWCg" outgoing="_lKg52Y5kEe2IcvekkDNWCg"/>
+              <node xmi:type="uml:SequenceNode" xmi:id="_lKdPY45kEe2IcvekkDNWCg" name="#body" incoming="_lKg52Y5kEe2IcvekkDNWCg" outgoing="_lKhg0I5kEe2IcvekkDNWCg">
+                <edge xmi:type="uml:ObjectFlow" xmi:id="_lKd2co5kEe2IcvekkDNWCg" name="this==>this" target="_lKd2do5kEe2IcvekkDNWCg" source="_lKd2cI5kEe2IcvekkDNWCg"/>
+                <edge xmi:type="uml:ObjectFlow" xmi:id="_lKedgI5kEe2IcvekkDNWCg" name="this -> e==>selected" target="_lKedgo5kEe2IcvekkDNWCg" source="_lKd2c45kEe2IcvekkDNWCg"/>
+                <edge xmi:type="uml:ObjectFlow" xmi:id="_lKedhI5kEe2IcvekkDNWCg" name="select(this -> e)==>new_value" target="_lKedho5kEe2IcvekkDNWCg" source="_lKedg45kEe2IcvekkDNWCg"/>
+                <edge xmi:type="uml:ObjectFlow" xmi:id="_lKgSso5kEe2IcvekkDNWCg" name="this==>this" target="_lKgSto5kEe2IcvekkDNWCg" source="_lKgSsI5kEe2IcvekkDNWCg"/>
+                <edge xmi:type="uml:ObjectFlow" xmi:id="_lKgSuI5kEe2IcvekkDNWCg" name="this -> l==>selected" target="_lKgSuo5kEe2IcvekkDNWCg" source="_lKgSs45kEe2IcvekkDNWCg"/>
+                <edge xmi:type="uml:ObjectFlow" xmi:id="_lKgSvI5kEe2IcvekkDNWCg" name="select(this -> l)==>new_value" target="_lKgSvo5kEe2IcvekkDNWCg" source="_lKgSu45kEe2IcvekkDNWCg"/>
+                <variable xmi:id="_lKdPZI5kEe2IcvekkDNWCg" name="e" type="_lH8G4I5kEe2IcvekkDNWCg"/>
+                <variable xmi:id="_lKfrto5kEe2IcvekkDNWCg" name="l" type="_lIYLwI5kEe2IcvekkDNWCg"/>
+                <executableNode xmi:type="uml:ReadSelfAction" xmi:id="_lKd2cI5kEe2IcvekkDNWCg" name="this" outgoing="_lKd2co5kEe2IcvekkDNWCg">
+                  <result xmi:id="_lKd2cY5kEe2IcvekkDNWCg" name="this" type="_lIgHkI5kEe2IcvekkDNWCg"/>
+                </executableNode>
+                <executableNode xmi:type="uml:ReadLinkAction" xmi:id="_lKd2c45kEe2IcvekkDNWCg" name="this -> e" outgoing="_lKedgI5kEe2IcvekkDNWCg">
+                  <endData xmi:id="_lKd2dI5kEe2IcvekkDNWCg" end="_lK7JcY5kEe2IcvekkDNWCg" value="_lKd2do5kEe2IcvekkDNWCg"/>
+                  <endData xmi:id="_lKd2dY5kEe2IcvekkDNWCg" end="_lK7wgY5kEe2IcvekkDNWCg"/>
+                  <inputValue xmi:id="_lKd2do5kEe2IcvekkDNWCg" name="this" incoming="_lKd2co5kEe2IcvekkDNWCg"/>
+                  <result xmi:id="_lKd2d45kEe2IcvekkDNWCg"/>
+                </executableNode>
+                <executableNode xmi:type="uml:CallOperationAction" xmi:id="_lKedgY5kEe2IcvekkDNWCg" name="select(this -> e)">
+                  <argument xmi:id="_lKedgo5kEe2IcvekkDNWCg" name="selected" incoming="_lKedgI5kEe2IcvekkDNWCg"/>
+                  <result xmi:id="_lKedg45kEe2IcvekkDNWCg" name="select(this -> e)" outgoing="_lKedhI5kEe2IcvekkDNWCg"/>
+                  <operation href="pathmap://TXTUML_STDLIB/stdlib.uml#_dS_o0AY7Eeae1rX0uG0rnw"/>
+                </executableNode>
+                <executableNode xmi:type="uml:AddVariableValueAction" xmi:id="_lKedhY5kEe2IcvekkDNWCg" name="e=select(this -> e)" variable="_lKdPZI5kEe2IcvekkDNWCg" isReplaceAll="true">
+                  <value xmi:id="_lKedho5kEe2IcvekkDNWCg" name="new_value" incoming="_lKedhI5kEe2IcvekkDNWCg" type="_lH8G4I5kEe2IcvekkDNWCg"/>
+                </executableNode>
+                <executableNode xmi:type="uml:SequenceNode" xmi:id="_lKedh45kEe2IcvekkDNWCg"/>
+                <executableNode xmi:type="uml:SequenceNode" xmi:id="_lKfroI5kEe2IcvekkDNWCg" name="send create EngineOff to e;">
+                  <edge xmi:type="uml:ObjectFlow" xmi:id="_lKfroY5kEe2IcvekkDNWCg" name="create EngineOff==>signal_to_send" target="_lKfrtI5kEe2IcvekkDNWCg" source="_lKfro45kEe2IcvekkDNWCg"/>
+                  <edge xmi:type="uml:ObjectFlow" xmi:id="_lKfroo5kEe2IcvekkDNWCg" name="e==>receiver" target="_lKfrtY5kEe2IcvekkDNWCg" source="_lKfrsY5kEe2IcvekkDNWCg"/>
+                  <executableNode xmi:type="uml:SequenceNode" xmi:id="_lKfro45kEe2IcvekkDNWCg" name="create EngineOff" outgoing="_lKfroY5kEe2IcvekkDNWCg">
+                    <edge xmi:type="uml:ObjectFlow" xmi:id="_lKfrpI5kEe2IcvekkDNWCg" name="instantiate EngineOff==>new_value" target="_lKfrqo5kEe2IcvekkDNWCg" source="_lKfrqI5kEe2IcvekkDNWCg"/>
+                    <edge xmi:type="uml:ObjectFlow" xmi:id="_lKfrpY5kEe2IcvekkDNWCg" name="#temp==>p0" target="_lKfrro5kEe2IcvekkDNWCg" source="_lKfrrI5kEe2IcvekkDNWCg"/>
+                    <variable xmi:id="_lKfrpo5kEe2IcvekkDNWCg" name="#temp" type="_lLFhgI5kEe2IcvekkDNWCg"/>
+                    <executableNode xmi:type="uml:CreateObjectAction" xmi:id="_lKfrp45kEe2IcvekkDNWCg" name="instantiate EngineOff" classifier="_lLFhgI5kEe2IcvekkDNWCg">
+                      <result xmi:id="_lKfrqI5kEe2IcvekkDNWCg" name="instantiate EngineOff" outgoing="_lKfrpI5kEe2IcvekkDNWCg" type="_lLFhgI5kEe2IcvekkDNWCg"/>
+                    </executableNode>
+                    <executableNode xmi:type="uml:AddVariableValueAction" xmi:id="_lKfrqY5kEe2IcvekkDNWCg" name="#temp=instantiate EngineOff" variable="_lKfrpo5kEe2IcvekkDNWCg" isReplaceAll="true">
+                      <value xmi:id="_lKfrqo5kEe2IcvekkDNWCg" name="new_value" incoming="_lKfrpI5kEe2IcvekkDNWCg" type="_lLFhgI5kEe2IcvekkDNWCg"/>
+                    </executableNode>
+                    <executableNode xmi:type="uml:ReadVariableAction" xmi:id="_lKfrq45kEe2IcvekkDNWCg" name="#temp" variable="_lKfrpo5kEe2IcvekkDNWCg">
+                      <result xmi:id="_lKfrrI5kEe2IcvekkDNWCg" name="#temp" outgoing="_lKfrpY5kEe2IcvekkDNWCg" type="_lLFhgI5kEe2IcvekkDNWCg"/>
+                    </executableNode>
+                    <executableNode xmi:type="uml:CallOperationAction" xmi:id="_lKfrrY5kEe2IcvekkDNWCg" name="EngineOff( p0)" operation="_lLFhg45kEe2IcvekkDNWCg">
+                      <argument xmi:id="_lKfrro5kEe2IcvekkDNWCg" name="p0" incoming="_lKfrpY5kEe2IcvekkDNWCg" type="_lLFhgI5kEe2IcvekkDNWCg"/>
+                    </executableNode>
+                    <executableNode xmi:type="uml:ReadVariableAction" xmi:id="_lKfrr45kEe2IcvekkDNWCg" name="#temp" variable="_lKfrpo5kEe2IcvekkDNWCg">
+                      <result xmi:id="_lKfrsI5kEe2IcvekkDNWCg" name="#temp" type="_lLFhgI5kEe2IcvekkDNWCg"/>
+                    </executableNode>
+                  </executableNode>
+                  <executableNode xmi:type="uml:ReadVariableAction" xmi:id="_lKfrsY5kEe2IcvekkDNWCg" name="e" outgoing="_lKfroo5kEe2IcvekkDNWCg" variable="_lKdPZI5kEe2IcvekkDNWCg">
+                    <result xmi:id="_lKfrso5kEe2IcvekkDNWCg" name="e" type="_lH8G4I5kEe2IcvekkDNWCg"/>
+                  </executableNode>
+                  <executableNode xmi:type="uml:SendObjectAction" xmi:id="_lKfrs45kEe2IcvekkDNWCg" name="send create EngineOff to e">
+                    <request xmi:id="_lKfrtI5kEe2IcvekkDNWCg" name="signal_to_send" incoming="_lKfroY5kEe2IcvekkDNWCg" type="_lLFhgI5kEe2IcvekkDNWCg"/>
+                    <target xmi:id="_lKfrtY5kEe2IcvekkDNWCg" name="receiver" incoming="_lKfroo5kEe2IcvekkDNWCg" type="_lH8G4I5kEe2IcvekkDNWCg"/>
+                  </executableNode>
+                </executableNode>
+                <executableNode xmi:type="uml:ReadSelfAction" xmi:id="_lKgSsI5kEe2IcvekkDNWCg" name="this" outgoing="_lKgSso5kEe2IcvekkDNWCg">
+                  <result xmi:id="_lKgSsY5kEe2IcvekkDNWCg" name="this" type="_lIgHkI5kEe2IcvekkDNWCg"/>
+                </executableNode>
+                <executableNode xmi:type="uml:ReadLinkAction" xmi:id="_lKgSs45kEe2IcvekkDNWCg" name="this -> l" outgoing="_lKgSuI5kEe2IcvekkDNWCg">
+                  <endData xmi:id="_lKgStI5kEe2IcvekkDNWCg" end="_lKz0sI5kEe2IcvekkDNWCg" value="_lKgSto5kEe2IcvekkDNWCg"/>
+                  <endData xmi:id="_lKgStY5kEe2IcvekkDNWCg" end="_lK2Q8I5kEe2IcvekkDNWCg"/>
+                  <inputValue xmi:id="_lKgSto5kEe2IcvekkDNWCg" name="this" incoming="_lKgSso5kEe2IcvekkDNWCg"/>
+                  <result xmi:id="_lKgSt45kEe2IcvekkDNWCg"/>
+                </executableNode>
+                <executableNode xmi:type="uml:CallOperationAction" xmi:id="_lKgSuY5kEe2IcvekkDNWCg" name="select(this -> l)">
+                  <argument xmi:id="_lKgSuo5kEe2IcvekkDNWCg" name="selected" incoming="_lKgSuI5kEe2IcvekkDNWCg"/>
+                  <result xmi:id="_lKgSu45kEe2IcvekkDNWCg" name="select(this -> l)" outgoing="_lKgSvI5kEe2IcvekkDNWCg"/>
+                  <operation href="pathmap://TXTUML_STDLIB/stdlib.uml#_dS_o0AY7Eeae1rX0uG0rnw"/>
+                </executableNode>
+                <executableNode xmi:type="uml:AddVariableValueAction" xmi:id="_lKgSvY5kEe2IcvekkDNWCg" name="l=select(this -> l)" variable="_lKfrto5kEe2IcvekkDNWCg" isReplaceAll="true">
+                  <value xmi:id="_lKgSvo5kEe2IcvekkDNWCg" name="new_value" incoming="_lKgSvI5kEe2IcvekkDNWCg" type="_lIYLwI5kEe2IcvekkDNWCg"/>
+                </executableNode>
+                <executableNode xmi:type="uml:SequenceNode" xmi:id="_lKgSv45kEe2IcvekkDNWCg"/>
+                <executableNode xmi:type="uml:SequenceNode" xmi:id="_lKg5wI5kEe2IcvekkDNWCg" name="send create LightOff to l;">
+                  <edge xmi:type="uml:ObjectFlow" xmi:id="_lKg5wY5kEe2IcvekkDNWCg" name="create LightOff==>signal_to_send" target="_lKg51I5kEe2IcvekkDNWCg" source="_lKg5w45kEe2IcvekkDNWCg"/>
+                  <edge xmi:type="uml:ObjectFlow" xmi:id="_lKg5wo5kEe2IcvekkDNWCg" name="l==>receiver" target="_lKg51Y5kEe2IcvekkDNWCg" source="_lKg50Y5kEe2IcvekkDNWCg"/>
+                  <executableNode xmi:type="uml:SequenceNode" xmi:id="_lKg5w45kEe2IcvekkDNWCg" name="create LightOff" outgoing="_lKg5wY5kEe2IcvekkDNWCg">
+                    <edge xmi:type="uml:ObjectFlow" xmi:id="_lKg5xI5kEe2IcvekkDNWCg" name="instantiate LightOff==>new_value" target="_lKg5yo5kEe2IcvekkDNWCg" source="_lKg5yI5kEe2IcvekkDNWCg"/>
+                    <edge xmi:type="uml:ObjectFlow" xmi:id="_lKg5xY5kEe2IcvekkDNWCg" name="#temp==>p0" target="_lKg5zo5kEe2IcvekkDNWCg" source="_lKg5zI5kEe2IcvekkDNWCg"/>
+                    <variable xmi:id="_lKg5xo5kEe2IcvekkDNWCg" name="#temp" type="_lK8-oI5kEe2IcvekkDNWCg"/>
+                    <executableNode xmi:type="uml:CreateObjectAction" xmi:id="_lKg5x45kEe2IcvekkDNWCg" name="instantiate LightOff" classifier="_lK8-oI5kEe2IcvekkDNWCg">
+                      <result xmi:id="_lKg5yI5kEe2IcvekkDNWCg" name="instantiate LightOff" outgoing="_lKg5xI5kEe2IcvekkDNWCg" type="_lK8-oI5kEe2IcvekkDNWCg"/>
+                    </executableNode>
+                    <executableNode xmi:type="uml:AddVariableValueAction" xmi:id="_lKg5yY5kEe2IcvekkDNWCg" name="#temp=instantiate LightOff" variable="_lKg5xo5kEe2IcvekkDNWCg" isReplaceAll="true">
+                      <value xmi:id="_lKg5yo5kEe2IcvekkDNWCg" name="new_value" incoming="_lKg5xI5kEe2IcvekkDNWCg" type="_lK8-oI5kEe2IcvekkDNWCg"/>
+                    </executableNode>
+                    <executableNode xmi:type="uml:ReadVariableAction" xmi:id="_lKg5y45kEe2IcvekkDNWCg" name="#temp" variable="_lKg5xo5kEe2IcvekkDNWCg">
+                      <result xmi:id="_lKg5zI5kEe2IcvekkDNWCg" name="#temp" outgoing="_lKg5xY5kEe2IcvekkDNWCg" type="_lK8-oI5kEe2IcvekkDNWCg"/>
+                    </executableNode>
+                    <executableNode xmi:type="uml:CallOperationAction" xmi:id="_lKg5zY5kEe2IcvekkDNWCg" name="LightOff( p0)" operation="_lK_a4I5kEe2IcvekkDNWCg">
+                      <argument xmi:id="_lKg5zo5kEe2IcvekkDNWCg" name="p0" incoming="_lKg5xY5kEe2IcvekkDNWCg" type="_lK8-oI5kEe2IcvekkDNWCg"/>
+                    </executableNode>
+                    <executableNode xmi:type="uml:ReadVariableAction" xmi:id="_lKg5z45kEe2IcvekkDNWCg" name="#temp" variable="_lKg5xo5kEe2IcvekkDNWCg">
+                      <result xmi:id="_lKg50I5kEe2IcvekkDNWCg" name="#temp" type="_lK8-oI5kEe2IcvekkDNWCg"/>
+                    </executableNode>
+                  </executableNode>
+                  <executableNode xmi:type="uml:ReadVariableAction" xmi:id="_lKg50Y5kEe2IcvekkDNWCg" name="l" outgoing="_lKg5wo5kEe2IcvekkDNWCg" variable="_lKfrto5kEe2IcvekkDNWCg">
+                    <result xmi:id="_lKg50o5kEe2IcvekkDNWCg" name="l" type="_lIYLwI5kEe2IcvekkDNWCg"/>
+                  </executableNode>
+                  <executableNode xmi:type="uml:SendObjectAction" xmi:id="_lKg5045kEe2IcvekkDNWCg" name="send create LightOff to l">
+                    <request xmi:id="_lKg51I5kEe2IcvekkDNWCg" name="signal_to_send" incoming="_lKg5wY5kEe2IcvekkDNWCg" type="_lK8-oI5kEe2IcvekkDNWCg"/>
+                    <target xmi:id="_lKg51Y5kEe2IcvekkDNWCg" name="receiver" incoming="_lKg5wo5kEe2IcvekkDNWCg" type="_lIYLwI5kEe2IcvekkDNWCg"/>
+                  </executableNode>
+                </executableNode>
+              </node>
+              <node xmi:type="uml:SequenceNode" xmi:id="_lKg51o5kEe2IcvekkDNWCg" name="#finish" incoming="_lKhg0I5kEe2IcvekkDNWCg" outgoing="_lKhg0Y5kEe2IcvekkDNWCg"/>
+              <node xmi:type="uml:ActivityFinalNode" xmi:id="_lKg5145kEe2IcvekkDNWCg" name="#final" incoming="_lKhg0Y5kEe2IcvekkDNWCg"/>
+            </effect>
+            <trigger xmi:id="_lKcoVI5kEe2IcvekkDNWCg" name="null_trigger" event="_lLCeMY5kEe2IcvekkDNWCg"/>
+          </transition>
+          <transition xmi:id="_lKhg0o5kEe2IcvekkDNWCg" name="Backwards_Neutral" source="_lKWhsY5kEe2IcvekkDNWCg" target="_lKUsgo5kEe2IcvekkDNWCg">
+            <effect xmi:type="uml:Activity" xmi:id="_lKhg1I5kEe2IcvekkDNWCg" name="effect" node="_lKhg1Y5kEe2IcvekkDNWCg _lKhg1o5kEe2IcvekkDNWCg _lKhg145kEe2IcvekkDNWCg _lKlyQI5kEe2IcvekkDNWCg _lKlyQY5kEe2IcvekkDNWCg">
+              <edge xmi:type="uml:ControlFlow" xmi:id="_lKlyQo5kEe2IcvekkDNWCg" name="#init~~>null" target="_lKhg1o5kEe2IcvekkDNWCg" source="_lKhg1Y5kEe2IcvekkDNWCg"/>
+              <edge xmi:type="uml:ControlFlow" xmi:id="_lKlyQ45kEe2IcvekkDNWCg" name="null~~>#body" target="_lKhg145kEe2IcvekkDNWCg" source="_lKhg1o5kEe2IcvekkDNWCg"/>
+              <edge xmi:type="uml:ControlFlow" xmi:id="_lKlyRI5kEe2IcvekkDNWCg" name="#body~~>#finish" target="_lKlyQI5kEe2IcvekkDNWCg" source="_lKhg145kEe2IcvekkDNWCg"/>
+              <edge xmi:type="uml:ControlFlow" xmi:id="_lKlyRY5kEe2IcvekkDNWCg" name="#finish~~>#final" target="_lKlyQY5kEe2IcvekkDNWCg" source="_lKlyQI5kEe2IcvekkDNWCg"/>
+              <node xmi:type="uml:InitialNode" xmi:id="_lKhg1Y5kEe2IcvekkDNWCg" name="#init" outgoing="_lKlyQo5kEe2IcvekkDNWCg"/>
+              <node xmi:type="uml:SequenceNode" xmi:id="_lKhg1o5kEe2IcvekkDNWCg" incoming="_lKlyQo5kEe2IcvekkDNWCg" outgoing="_lKlyQ45kEe2IcvekkDNWCg"/>
+              <node xmi:type="uml:SequenceNode" xmi:id="_lKhg145kEe2IcvekkDNWCg" name="#body" incoming="_lKlyQ45kEe2IcvekkDNWCg" outgoing="_lKlyRI5kEe2IcvekkDNWCg">
+                <edge xmi:type="uml:ObjectFlow" xmi:id="_lKiH4o5kEe2IcvekkDNWCg" name="this==>this" target="_lKiH5o5kEe2IcvekkDNWCg" source="_lKiH4I5kEe2IcvekkDNWCg"/>
+                <edge xmi:type="uml:ObjectFlow" xmi:id="_lKiH6I5kEe2IcvekkDNWCg" name="this -> e==>selected" target="_lKiH6o5kEe2IcvekkDNWCg" source="_lKiH445kEe2IcvekkDNWCg"/>
+                <edge xmi:type="uml:ObjectFlow" xmi:id="_lKiH7I5kEe2IcvekkDNWCg" name="select(this -> e)==>new_value" target="_lKiH7o5kEe2IcvekkDNWCg" source="_lKiH645kEe2IcvekkDNWCg"/>
+                <edge xmi:type="uml:ObjectFlow" xmi:id="_lKj9E45kEe2IcvekkDNWCg" name="this==>this" target="_lKkkI45kEe2IcvekkDNWCg" source="_lKj9EY5kEe2IcvekkDNWCg"/>
+                <edge xmi:type="uml:ObjectFlow" xmi:id="_lKkkJY5kEe2IcvekkDNWCg" name="this -> l==>selected" target="_lKkkJ45kEe2IcvekkDNWCg" source="_lKkkII5kEe2IcvekkDNWCg"/>
+                <edge xmi:type="uml:ObjectFlow" xmi:id="_lKkkKY5kEe2IcvekkDNWCg" name="select(this -> l)==>new_value" target="_lKkkK45kEe2IcvekkDNWCg" source="_lKkkKI5kEe2IcvekkDNWCg"/>
+                <variable xmi:id="_lKhg2I5kEe2IcvekkDNWCg" name="e" type="_lH8G4I5kEe2IcvekkDNWCg"/>
+                <variable xmi:id="_lKj9EI5kEe2IcvekkDNWCg" name="l" type="_lIYLwI5kEe2IcvekkDNWCg"/>
+                <executableNode xmi:type="uml:ReadSelfAction" xmi:id="_lKiH4I5kEe2IcvekkDNWCg" name="this" outgoing="_lKiH4o5kEe2IcvekkDNWCg">
+                  <result xmi:id="_lKiH4Y5kEe2IcvekkDNWCg" name="this" type="_lIgHkI5kEe2IcvekkDNWCg"/>
+                </executableNode>
+                <executableNode xmi:type="uml:ReadLinkAction" xmi:id="_lKiH445kEe2IcvekkDNWCg" name="this -> e" outgoing="_lKiH6I5kEe2IcvekkDNWCg">
+                  <endData xmi:id="_lKiH5I5kEe2IcvekkDNWCg" end="_lK7JcY5kEe2IcvekkDNWCg" value="_lKiH5o5kEe2IcvekkDNWCg"/>
+                  <endData xmi:id="_lKiH5Y5kEe2IcvekkDNWCg" end="_lK7wgY5kEe2IcvekkDNWCg"/>
+                  <inputValue xmi:id="_lKiH5o5kEe2IcvekkDNWCg" name="this" incoming="_lKiH4o5kEe2IcvekkDNWCg"/>
+                  <result xmi:id="_lKiH545kEe2IcvekkDNWCg"/>
+                </executableNode>
+                <executableNode xmi:type="uml:CallOperationAction" xmi:id="_lKiH6Y5kEe2IcvekkDNWCg" name="select(this -> e)">
+                  <argument xmi:id="_lKiH6o5kEe2IcvekkDNWCg" name="selected" incoming="_lKiH6I5kEe2IcvekkDNWCg"/>
+                  <result xmi:id="_lKiH645kEe2IcvekkDNWCg" name="select(this -> e)" outgoing="_lKiH7I5kEe2IcvekkDNWCg"/>
+                  <operation href="pathmap://TXTUML_STDLIB/stdlib.uml#_dS_o0AY7Eeae1rX0uG0rnw"/>
+                </executableNode>
+                <executableNode xmi:type="uml:AddVariableValueAction" xmi:id="_lKiH7Y5kEe2IcvekkDNWCg" name="e=select(this -> e)" variable="_lKhg2I5kEe2IcvekkDNWCg" isReplaceAll="true">
+                  <value xmi:id="_lKiH7o5kEe2IcvekkDNWCg" name="new_value" incoming="_lKiH7I5kEe2IcvekkDNWCg" type="_lH8G4I5kEe2IcvekkDNWCg"/>
+                </executableNode>
+                <executableNode xmi:type="uml:SequenceNode" xmi:id="_lKiH745kEe2IcvekkDNWCg"/>
+                <executableNode xmi:type="uml:SequenceNode" xmi:id="_lKiu8I5kEe2IcvekkDNWCg" name="send create EngineOff to e;">
+                  <edge xmi:type="uml:ObjectFlow" xmi:id="_lKiu8Y5kEe2IcvekkDNWCg" name="create EngineOff==>signal_to_send" target="_lKivBI5kEe2IcvekkDNWCg" source="_lKiu845kEe2IcvekkDNWCg"/>
+                  <edge xmi:type="uml:ObjectFlow" xmi:id="_lKiu8o5kEe2IcvekkDNWCg" name="e==>receiver" target="_lKivBY5kEe2IcvekkDNWCg" source="_lKivAY5kEe2IcvekkDNWCg"/>
+                  <executableNode xmi:type="uml:SequenceNode" xmi:id="_lKiu845kEe2IcvekkDNWCg" name="create EngineOff" outgoing="_lKiu8Y5kEe2IcvekkDNWCg">
+                    <edge xmi:type="uml:ObjectFlow" xmi:id="_lKiu9I5kEe2IcvekkDNWCg" name="instantiate EngineOff==>new_value" target="_lKiu-o5kEe2IcvekkDNWCg" source="_lKiu-I5kEe2IcvekkDNWCg"/>
+                    <edge xmi:type="uml:ObjectFlow" xmi:id="_lKiu9Y5kEe2IcvekkDNWCg" name="#temp==>p0" target="_lKiu_o5kEe2IcvekkDNWCg" source="_lKiu_I5kEe2IcvekkDNWCg"/>
+                    <variable xmi:id="_lKiu9o5kEe2IcvekkDNWCg" name="#temp" type="_lLFhgI5kEe2IcvekkDNWCg"/>
+                    <executableNode xmi:type="uml:CreateObjectAction" xmi:id="_lKiu945kEe2IcvekkDNWCg" name="instantiate EngineOff" classifier="_lLFhgI5kEe2IcvekkDNWCg">
+                      <result xmi:id="_lKiu-I5kEe2IcvekkDNWCg" name="instantiate EngineOff" outgoing="_lKiu9I5kEe2IcvekkDNWCg" type="_lLFhgI5kEe2IcvekkDNWCg"/>
+                    </executableNode>
+                    <executableNode xmi:type="uml:AddVariableValueAction" xmi:id="_lKiu-Y5kEe2IcvekkDNWCg" name="#temp=instantiate EngineOff" variable="_lKiu9o5kEe2IcvekkDNWCg" isReplaceAll="true">
+                      <value xmi:id="_lKiu-o5kEe2IcvekkDNWCg" name="new_value" incoming="_lKiu9I5kEe2IcvekkDNWCg" type="_lLFhgI5kEe2IcvekkDNWCg"/>
+                    </executableNode>
+                    <executableNode xmi:type="uml:ReadVariableAction" xmi:id="_lKiu-45kEe2IcvekkDNWCg" name="#temp" variable="_lKiu9o5kEe2IcvekkDNWCg">
+                      <result xmi:id="_lKiu_I5kEe2IcvekkDNWCg" name="#temp" outgoing="_lKiu9Y5kEe2IcvekkDNWCg" type="_lLFhgI5kEe2IcvekkDNWCg"/>
+                    </executableNode>
+                    <executableNode xmi:type="uml:CallOperationAction" xmi:id="_lKiu_Y5kEe2IcvekkDNWCg" name="EngineOff( p0)" operation="_lLFhg45kEe2IcvekkDNWCg">
+                      <argument xmi:id="_lKiu_o5kEe2IcvekkDNWCg" name="p0" incoming="_lKiu9Y5kEe2IcvekkDNWCg" type="_lLFhgI5kEe2IcvekkDNWCg"/>
+                    </executableNode>
+                    <executableNode xmi:type="uml:ReadVariableAction" xmi:id="_lKiu_45kEe2IcvekkDNWCg" name="#temp" variable="_lKiu9o5kEe2IcvekkDNWCg">
+                      <result xmi:id="_lKivAI5kEe2IcvekkDNWCg" name="#temp" type="_lLFhgI5kEe2IcvekkDNWCg"/>
+                    </executableNode>
+                  </executableNode>
+                  <executableNode xmi:type="uml:ReadVariableAction" xmi:id="_lKivAY5kEe2IcvekkDNWCg" name="e" outgoing="_lKiu8o5kEe2IcvekkDNWCg" variable="_lKhg2I5kEe2IcvekkDNWCg">
+                    <result xmi:id="_lKivAo5kEe2IcvekkDNWCg" name="e" type="_lH8G4I5kEe2IcvekkDNWCg"/>
+                  </executableNode>
+                  <executableNode xmi:type="uml:SendObjectAction" xmi:id="_lKivA45kEe2IcvekkDNWCg" name="send create EngineOff to e">
+                    <request xmi:id="_lKivBI5kEe2IcvekkDNWCg" name="signal_to_send" incoming="_lKiu8Y5kEe2IcvekkDNWCg" type="_lLFhgI5kEe2IcvekkDNWCg"/>
+                    <target xmi:id="_lKivBY5kEe2IcvekkDNWCg" name="receiver" incoming="_lKiu8o5kEe2IcvekkDNWCg" type="_lH8G4I5kEe2IcvekkDNWCg"/>
+                  </executableNode>
+                </executableNode>
+                <executableNode xmi:type="uml:ReadSelfAction" xmi:id="_lKj9EY5kEe2IcvekkDNWCg" name="this" outgoing="_lKj9E45kEe2IcvekkDNWCg">
+                  <result xmi:id="_lKj9Eo5kEe2IcvekkDNWCg" name="this" type="_lIgHkI5kEe2IcvekkDNWCg"/>
+                </executableNode>
+                <executableNode xmi:type="uml:ReadLinkAction" xmi:id="_lKkkII5kEe2IcvekkDNWCg" name="this -> l" outgoing="_lKkkJY5kEe2IcvekkDNWCg">
+                  <endData xmi:id="_lKkkIY5kEe2IcvekkDNWCg" end="_lKz0sI5kEe2IcvekkDNWCg" value="_lKkkI45kEe2IcvekkDNWCg"/>
+                  <endData xmi:id="_lKkkIo5kEe2IcvekkDNWCg" end="_lK2Q8I5kEe2IcvekkDNWCg"/>
+                  <inputValue xmi:id="_lKkkI45kEe2IcvekkDNWCg" name="this" incoming="_lKj9E45kEe2IcvekkDNWCg"/>
+                  <result xmi:id="_lKkkJI5kEe2IcvekkDNWCg"/>
+                </executableNode>
+                <executableNode xmi:type="uml:CallOperationAction" xmi:id="_lKkkJo5kEe2IcvekkDNWCg" name="select(this -> l)">
+                  <argument xmi:id="_lKkkJ45kEe2IcvekkDNWCg" name="selected" incoming="_lKkkJY5kEe2IcvekkDNWCg"/>
+                  <result xmi:id="_lKkkKI5kEe2IcvekkDNWCg" name="select(this -> l)" outgoing="_lKkkKY5kEe2IcvekkDNWCg"/>
+                  <operation href="pathmap://TXTUML_STDLIB/stdlib.uml#_dS_o0AY7Eeae1rX0uG0rnw"/>
+                </executableNode>
+                <executableNode xmi:type="uml:AddVariableValueAction" xmi:id="_lKkkKo5kEe2IcvekkDNWCg" name="l=select(this -> l)" variable="_lKj9EI5kEe2IcvekkDNWCg" isReplaceAll="true">
+                  <value xmi:id="_lKkkK45kEe2IcvekkDNWCg" name="new_value" incoming="_lKkkKY5kEe2IcvekkDNWCg" type="_lIYLwI5kEe2IcvekkDNWCg"/>
+                </executableNode>
+                <executableNode xmi:type="uml:SequenceNode" xmi:id="_lKkkLI5kEe2IcvekkDNWCg"/>
+                <executableNode xmi:type="uml:SequenceNode" xmi:id="_lKlLMI5kEe2IcvekkDNWCg" name="send create LightOff to l;">
+                  <edge xmi:type="uml:ObjectFlow" xmi:id="_lKlLMY5kEe2IcvekkDNWCg" name="create LightOff==>signal_to_send" target="_lKlLRI5kEe2IcvekkDNWCg" source="_lKlLM45kEe2IcvekkDNWCg"/>
+                  <edge xmi:type="uml:ObjectFlow" xmi:id="_lKlLMo5kEe2IcvekkDNWCg" name="l==>receiver" target="_lKlLRY5kEe2IcvekkDNWCg" source="_lKlLQY5kEe2IcvekkDNWCg"/>
+                  <executableNode xmi:type="uml:SequenceNode" xmi:id="_lKlLM45kEe2IcvekkDNWCg" name="create LightOff" outgoing="_lKlLMY5kEe2IcvekkDNWCg">
+                    <edge xmi:type="uml:ObjectFlow" xmi:id="_lKlLNI5kEe2IcvekkDNWCg" name="instantiate LightOff==>new_value" target="_lKlLOo5kEe2IcvekkDNWCg" source="_lKlLOI5kEe2IcvekkDNWCg"/>
+                    <edge xmi:type="uml:ObjectFlow" xmi:id="_lKlLNY5kEe2IcvekkDNWCg" name="#temp==>p0" target="_lKlLPo5kEe2IcvekkDNWCg" source="_lKlLPI5kEe2IcvekkDNWCg"/>
+                    <variable xmi:id="_lKlLNo5kEe2IcvekkDNWCg" name="#temp" type="_lK8-oI5kEe2IcvekkDNWCg"/>
+                    <executableNode xmi:type="uml:CreateObjectAction" xmi:id="_lKlLN45kEe2IcvekkDNWCg" name="instantiate LightOff" classifier="_lK8-oI5kEe2IcvekkDNWCg">
+                      <result xmi:id="_lKlLOI5kEe2IcvekkDNWCg" name="instantiate LightOff" outgoing="_lKlLNI5kEe2IcvekkDNWCg" type="_lK8-oI5kEe2IcvekkDNWCg"/>
+                    </executableNode>
+                    <executableNode xmi:type="uml:AddVariableValueAction" xmi:id="_lKlLOY5kEe2IcvekkDNWCg" name="#temp=instantiate LightOff" variable="_lKlLNo5kEe2IcvekkDNWCg" isReplaceAll="true">
+                      <value xmi:id="_lKlLOo5kEe2IcvekkDNWCg" name="new_value" incoming="_lKlLNI5kEe2IcvekkDNWCg" type="_lK8-oI5kEe2IcvekkDNWCg"/>
+                    </executableNode>
+                    <executableNode xmi:type="uml:ReadVariableAction" xmi:id="_lKlLO45kEe2IcvekkDNWCg" name="#temp" variable="_lKlLNo5kEe2IcvekkDNWCg">
+                      <result xmi:id="_lKlLPI5kEe2IcvekkDNWCg" name="#temp" outgoing="_lKlLNY5kEe2IcvekkDNWCg" type="_lK8-oI5kEe2IcvekkDNWCg"/>
+                    </executableNode>
+                    <executableNode xmi:type="uml:CallOperationAction" xmi:id="_lKlLPY5kEe2IcvekkDNWCg" name="LightOff( p0)" operation="_lK_a4I5kEe2IcvekkDNWCg">
+                      <argument xmi:id="_lKlLPo5kEe2IcvekkDNWCg" name="p0" incoming="_lKlLNY5kEe2IcvekkDNWCg" type="_lK8-oI5kEe2IcvekkDNWCg"/>
+                    </executableNode>
+                    <executableNode xmi:type="uml:ReadVariableAction" xmi:id="_lKlLP45kEe2IcvekkDNWCg" name="#temp" variable="_lKlLNo5kEe2IcvekkDNWCg">
+                      <result xmi:id="_lKlLQI5kEe2IcvekkDNWCg" name="#temp" type="_lK8-oI5kEe2IcvekkDNWCg"/>
+                    </executableNode>
+                  </executableNode>
+                  <executableNode xmi:type="uml:ReadVariableAction" xmi:id="_lKlLQY5kEe2IcvekkDNWCg" name="l" outgoing="_lKlLMo5kEe2IcvekkDNWCg" variable="_lKj9EI5kEe2IcvekkDNWCg">
+                    <result xmi:id="_lKlLQo5kEe2IcvekkDNWCg" name="l" type="_lIYLwI5kEe2IcvekkDNWCg"/>
+                  </executableNode>
+                  <executableNode xmi:type="uml:SendObjectAction" xmi:id="_lKlLQ45kEe2IcvekkDNWCg" name="send create LightOff to l">
+                    <request xmi:id="_lKlLRI5kEe2IcvekkDNWCg" name="signal_to_send" incoming="_lKlLMY5kEe2IcvekkDNWCg" type="_lK8-oI5kEe2IcvekkDNWCg"/>
+                    <target xmi:id="_lKlLRY5kEe2IcvekkDNWCg" name="receiver" incoming="_lKlLMo5kEe2IcvekkDNWCg" type="_lIYLwI5kEe2IcvekkDNWCg"/>
+                  </executableNode>
+                </executableNode>
+              </node>
+              <node xmi:type="uml:SequenceNode" xmi:id="_lKlyQI5kEe2IcvekkDNWCg" name="#finish" incoming="_lKlyRI5kEe2IcvekkDNWCg" outgoing="_lKlyRY5kEe2IcvekkDNWCg"/>
+              <node xmi:type="uml:ActivityFinalNode" xmi:id="_lKlyQY5kEe2IcvekkDNWCg" name="#final" incoming="_lKlyRY5kEe2IcvekkDNWCg"/>
+            </effect>
+            <trigger xmi:id="_lKhg045kEe2IcvekkDNWCg" name="null_trigger" event="_lLGvoI5kEe2IcvekkDNWCg"/>
+          </transition>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_lKUsgY5kEe2IcvekkDNWCg" name="Init"/>
+          <subvertex xmi:type="uml:State" xmi:id="_lKUsgo5kEe2IcvekkDNWCg" name="Neutral"/>
+          <subvertex xmi:type="uml:State" xmi:id="_lKUsg45kEe2IcvekkDNWCg" name="Forwards">
+            <region xmi:id="_lKUshI5kEe2IcvekkDNWCg" name="Forwards">
+              <transition xmi:id="_lKV6oY5kEe2IcvekkDNWCg" name="FInit_F1" source="_lKVTkI5kEe2IcvekkDNWCg" target="_lKVTkY5kEe2IcvekkDNWCg"/>
+              <transition xmi:id="_lKV6oo5kEe2IcvekkDNWCg" name="F1_F2" source="_lKVTkY5kEe2IcvekkDNWCg" target="_lKV6oI5kEe2IcvekkDNWCg">
+                <trigger xmi:id="_lKV6o45kEe2IcvekkDNWCg" name="null_trigger" event="_lLGvoI5kEe2IcvekkDNWCg"/>
+              </transition>
+              <transition xmi:id="_lKV6pI5kEe2IcvekkDNWCg" name="F2_F1" source="_lKV6oI5kEe2IcvekkDNWCg" target="_lKVTkY5kEe2IcvekkDNWCg">
+                <trigger xmi:id="_lKWhsI5kEe2IcvekkDNWCg" name="null_trigger" event="_lLGvoI5kEe2IcvekkDNWCg"/>
+              </transition>
+              <subvertex xmi:type="uml:Pseudostate" xmi:id="_lKVTkI5kEe2IcvekkDNWCg" name="FInit"/>
+              <subvertex xmi:type="uml:State" xmi:id="_lKVTkY5kEe2IcvekkDNWCg" name="F1"/>
+              <subvertex xmi:type="uml:State" xmi:id="_lKV6oI5kEe2IcvekkDNWCg" name="F2"/>
+            </region>
+          </subvertex>
+          <subvertex xmi:type="uml:State" xmi:id="_lKWhsY5kEe2IcvekkDNWCg" name="Backwards">
+            <region xmi:id="_lKWhso5kEe2IcvekkDNWCg" name="Backwards">
+              <transition xmi:id="_lKXIwI5kEe2IcvekkDNWCg" name="BInit_B1" source="_lKWhs45kEe2IcvekkDNWCg" target="_lKWhtI5kEe2IcvekkDNWCg"/>
+              <transition xmi:id="_lKXIwY5kEe2IcvekkDNWCg" name="B1_B2" source="_lKWhtI5kEe2IcvekkDNWCg" target="_lKWhtY5kEe2IcvekkDNWCg">
+                <trigger xmi:id="_lKXIwo5kEe2IcvekkDNWCg" name="null_trigger" event="_lLCeMY5kEe2IcvekkDNWCg"/>
+              </transition>
+              <transition xmi:id="_lKXv0I5kEe2IcvekkDNWCg" name="B2_B1" source="_lKWhtY5kEe2IcvekkDNWCg" target="_lKWhtI5kEe2IcvekkDNWCg">
+                <trigger xmi:id="_lKXv0Y5kEe2IcvekkDNWCg" name="null_trigger" event="_lLCeMY5kEe2IcvekkDNWCg"/>
+              </transition>
+              <subvertex xmi:type="uml:Pseudostate" xmi:id="_lKWhs45kEe2IcvekkDNWCg" name="BInit"/>
+              <subvertex xmi:type="uml:State" xmi:id="_lKWhtI5kEe2IcvekkDNWCg" name="B1"/>
+              <subvertex xmi:type="uml:State" xmi:id="_lKWhtY5kEe2IcvekkDNWCg" name="B2"/>
+            </region>
+          </subvertex>
+        </region>
+      </ownedBehavior>
+      <ownedOperation xmi:id="_lIguoI5kEe2IcvekkDNWCg" name="startEngineOp" visibility="public" method="_lIrGsI5kEe2IcvekkDNWCg"/>
+      <ownedOperation xmi:id="_lIoqcI5kEe2IcvekkDNWCg" name="Gearbox" method="_lIqfoI5kEe2IcvekkDNWCg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_lK7whI5kEe2IcvekkDNWCg" name="signals">
+      <packagedElement xmi:type="uml:Signal" xmi:id="_lK8-oI5kEe2IcvekkDNWCg" name="LightOff"/>
+      <packagedElement xmi:type="uml:SignalEvent" xmi:id="_lK9lsI5kEe2IcvekkDNWCg" name="LightOff" signal="_lK8-oI5kEe2IcvekkDNWCg"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_lK-MwI5kEe2IcvekkDNWCg" name="#LightOff_factory">
+        <ownedBehavior xmi:type="uml:Activity" xmi:id="_lLApAI5kEe2IcvekkDNWCg" name="LightOff" specification="_lK_a4I5kEe2IcvekkDNWCg"/>
+        <ownedOperation xmi:id="_lK_a4I5kEe2IcvekkDNWCg" name="LightOff" isStatic="true" method="_lLApAI5kEe2IcvekkDNWCg">
+          <ownedParameter xmi:id="_lLAB8Y5kEe2IcvekkDNWCg" name="signal" type="_lK8-oI5kEe2IcvekkDNWCg"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Signal" xmi:id="_lLBQEI5kEe2IcvekkDNWCg" name="EngineOn"/>
+      <packagedElement xmi:type="uml:SignalEvent" xmi:id="_lLBQEY5kEe2IcvekkDNWCg" name="EngineOn" signal="_lLBQEI5kEe2IcvekkDNWCg"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_lLBQEo5kEe2IcvekkDNWCg" name="#EngineOn_factory">
+        <ownedBehavior xmi:type="uml:Activity" xmi:id="_lLB3Io5kEe2IcvekkDNWCg" name="EngineOn" specification="_lLBQE45kEe2IcvekkDNWCg"/>
+        <ownedOperation xmi:id="_lLBQE45kEe2IcvekkDNWCg" name="EngineOn" isStatic="true" method="_lLB3Io5kEe2IcvekkDNWCg">
+          <ownedParameter xmi:id="_lLB3IY5kEe2IcvekkDNWCg" name="signal" type="_lLBQEI5kEe2IcvekkDNWCg"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Signal" xmi:id="_lLCeMI5kEe2IcvekkDNWCg" name="Backward"/>
+      <packagedElement xmi:type="uml:SignalEvent" xmi:id="_lLCeMY5kEe2IcvekkDNWCg" name="Backward" signal="_lLCeMI5kEe2IcvekkDNWCg"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_lLCeMo5kEe2IcvekkDNWCg" name="#Backward_factory">
+        <ownedBehavior xmi:type="uml:Activity" xmi:id="_lLDFQo5kEe2IcvekkDNWCg" name="Backward" specification="_lLCeM45kEe2IcvekkDNWCg"/>
+        <ownedOperation xmi:id="_lLCeM45kEe2IcvekkDNWCg" name="Backward" isStatic="true" method="_lLDFQo5kEe2IcvekkDNWCg">
+          <ownedParameter xmi:id="_lLDFQY5kEe2IcvekkDNWCg" name="signal" type="_lLCeMI5kEe2IcvekkDNWCg"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Signal" xmi:id="_lLETYI5kEe2IcvekkDNWCg" name="SwitchLight"/>
+      <packagedElement xmi:type="uml:SignalEvent" xmi:id="_lLETYY5kEe2IcvekkDNWCg" name="SwitchLight" signal="_lLETYI5kEe2IcvekkDNWCg"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_lLETYo5kEe2IcvekkDNWCg" name="#SwitchLight_factory">
+        <ownedBehavior xmi:type="uml:Activity" xmi:id="_lLE6cI5kEe2IcvekkDNWCg" name="SwitchLight" specification="_lLETY45kEe2IcvekkDNWCg"/>
+        <ownedOperation xmi:id="_lLETY45kEe2IcvekkDNWCg" name="SwitchLight" isStatic="true" method="_lLE6cI5kEe2IcvekkDNWCg">
+          <ownedParameter xmi:id="_lLETZY5kEe2IcvekkDNWCg" name="signal" type="_lLETYI5kEe2IcvekkDNWCg"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Signal" xmi:id="_lLFhgI5kEe2IcvekkDNWCg" name="EngineOff"/>
+      <packagedElement xmi:type="uml:SignalEvent" xmi:id="_lLFhgY5kEe2IcvekkDNWCg" name="EngineOff" signal="_lLFhgI5kEe2IcvekkDNWCg"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_lLFhgo5kEe2IcvekkDNWCg" name="#EngineOff_factory">
+        <ownedBehavior xmi:type="uml:Activity" xmi:id="_lLFhho5kEe2IcvekkDNWCg" name="EngineOff" specification="_lLFhg45kEe2IcvekkDNWCg"/>
+        <ownedOperation xmi:id="_lLFhg45kEe2IcvekkDNWCg" name="EngineOff" isStatic="true" method="_lLFhho5kEe2IcvekkDNWCg">
+          <ownedParameter xmi:id="_lLFhhY5kEe2IcvekkDNWCg" name="signal" type="_lLFhgI5kEe2IcvekkDNWCg"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Signal" xmi:id="_lLGIkI5kEe2IcvekkDNWCg" name="Forward"/>
+      <packagedElement xmi:type="uml:SignalEvent" xmi:id="_lLGvoI5kEe2IcvekkDNWCg" name="Forward" signal="_lLGIkI5kEe2IcvekkDNWCg"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_lLGvoY5kEe2IcvekkDNWCg" name="#Forward_factory">
+        <ownedBehavior xmi:type="uml:Activity" xmi:id="_lLGvpY5kEe2IcvekkDNWCg" name="Forward" specification="_lLGvoo5kEe2IcvekkDNWCg"/>
+        <ownedOperation xmi:id="_lLGvoo5kEe2IcvekkDNWCg" name="Forward" isStatic="true" method="_lLGvpY5kEe2IcvekkDNWCg">
+          <ownedParameter xmi:id="_lLGvpI5kEe2IcvekkDNWCg" name="signal" type="_lLGIkI5kEe2IcvekkDNWCg"/>
+        </ownedOperation>
+      </packagedElement>
+    </packagedElement>
+    <profileApplication xmi:id="_lE2WoI5kEe2IcvekkDNWCg">
+      <eAnnotations xmi:id="_lE4L0I5kEe2IcvekkDNWCg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard#/"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+    </profileApplication>
+  </uml:Model>
+  <standard:Create xmi:id="_lIHtEI5kEe2IcvekkDNWCg" base_BehavioralFeature="_lIAYUI5kEe2IcvekkDNWCg"/>
+  <standard:Create xmi:id="_lIYy0Y5kEe2IcvekkDNWCg" base_BehavioralFeature="_lIYy0I5kEe2IcvekkDNWCg"/>
+  <standard:Create xmi:id="_lIpRgI5kEe2IcvekkDNWCg" base_BehavioralFeature="_lIoqcI5kEe2IcvekkDNWCg"/>
+  <standard:Create xmi:id="_lLAB8I5kEe2IcvekkDNWCg" base_BehavioralFeature="_lK_a4I5kEe2IcvekkDNWCg"/>
+  <standard:Create xmi:id="_lLB3II5kEe2IcvekkDNWCg" base_BehavioralFeature="_lLBQE45kEe2IcvekkDNWCg"/>
+  <standard:Create xmi:id="_lLDFQI5kEe2IcvekkDNWCg" base_BehavioralFeature="_lLCeM45kEe2IcvekkDNWCg"/>
+  <standard:Create xmi:id="_lLETZI5kEe2IcvekkDNWCg" base_BehavioralFeature="_lLETY45kEe2IcvekkDNWCg"/>
+  <standard:Create xmi:id="_lLFhhI5kEe2IcvekkDNWCg" base_BehavioralFeature="_lLFhg45kEe2IcvekkDNWCg"/>
+  <standard:Create xmi:id="_lLGvo45kEe2IcvekkDNWCg" base_BehavioralFeature="_lLGvoo5kEe2IcvekkDNWCg"/>
+</xmi:XMI>

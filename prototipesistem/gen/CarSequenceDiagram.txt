@@ -1,0 +1,9 @@
+@startuml
+participant lamp
+participant gearbox
+participant engine
+gearbox->engine : car.j.model.signals.EngineOn
+gearbox->engine : car.j.model.signals.EngineOff
+gearbox->lamp : car.j.model.signals.LightOff
+gearbox->engine : car.j.model.signals.EngineOn
+@enduml

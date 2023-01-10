@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:standard="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
+  <uml:Model xmi:id="_qtNGQI5kEe2IcvekkDNWCg" name="Car">
+    <packageImport xmi:id="_qtTz8I5kEe2IcvekkDNWCg">
+      <importedPackage xmi:type="uml:Model" href="pathmap://TXTUML_STDLIB/stdlib.uml#_DE5UMHLCEeWVx4ZuxFlarQ"/>
+    </packageImport>
+    <packageImport xmi:id="_qtpyMI5kEe2IcvekkDNWCg">
+      <importedPackage xmi:type="uml:Profile" href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Package" xmi:id="_qwTdkI5kEe2IcvekkDNWCg" name="association">
+      <packagedElement xmi:type="uml:Association" xmi:id="_qwVSwI5kEe2IcvekkDNWCg" name="GL" memberEnd="_qwV50I5kEe2IcvekkDNWCg _qwV5045kEe2IcvekkDNWCg"/>
+      <packagedElement xmi:type="uml:Association" xmi:id="_qwYWEI5kEe2IcvekkDNWCg" name="LE" memberEnd="_qwYWEY5kEe2IcvekkDNWCg _qwY9II5kEe2IcvekkDNWCg"/>
+      <packagedElement xmi:type="uml:Association" xmi:id="_qwayUI5kEe2IcvekkDNWCg" name="GE" memberEnd="_qwayUY5kEe2IcvekkDNWCg _qwbZYo5kEe2IcvekkDNWCg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_qv2xoI5kEe2IcvekkDNWCg" name="Engine" classifierBehavior="_qv3_wI5kEe2IcvekkDNWCg">
+      <ownedAttribute xmi:id="_qwYWEY5kEe2IcvekkDNWCg" name="l" type="_qv_UgI5kEe2IcvekkDNWCg" association="_qwYWEI5kEe2IcvekkDNWCg">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_qwYWEo5kEe2IcvekkDNWCg" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_qwYWE45kEe2IcvekkDNWCg" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_qwayUY5kEe2IcvekkDNWCg" name="g" type="_qwJskI5kEe2IcvekkDNWCg" association="_qwayUI5kEe2IcvekkDNWCg">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_qwbZYI5kEe2IcvekkDNWCg" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_qwbZYY5kEe2IcvekkDNWCg" value="1"/>
+      </ownedAttribute>
+      <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_qv3_wI5kEe2IcvekkDNWCg" name="Engine">
+        <region xmi:id="_qv3_wY5kEe2IcvekkDNWCg" name="Engine">
+          <transition xmi:id="_qv4m0I5kEe2IcvekkDNWCg" name="Init_Stopped" source="_qv3_wo5kEe2IcvekkDNWCg" target="_qv3_w45kEe2IcvekkDNWCg"/>
+          <transition xmi:id="_qv4m0Y5kEe2IcvekkDNWCg" name="Stopped_Working" source="_qv3_w45kEe2IcvekkDNWCg" target="_qv3_xI5kEe2IcvekkDNWCg">
+            <trigger xmi:id="_qv5N4I5kEe2IcvekkDNWCg" name="null_trigger" event="_qwd1oY5kEe2IcvekkDNWCg"/>
+          </transition>
+          <transition xmi:id="_qv5N4Y5kEe2IcvekkDNWCg" name="Working_Stopped" source="_qv3_xI5kEe2IcvekkDNWCg" target="_qv3_w45kEe2IcvekkDNWCg">
+            <trigger xmi:id="_qv5N4o5kEe2IcvekkDNWCg" name="null_trigger" event="_qwj8QY5kEe2IcvekkDNWCg"/>
+          </transition>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_qv3_wo5kEe2IcvekkDNWCg" name="Init"/>
+          <subvertex xmi:type="uml:State" xmi:id="_qv3_w45kEe2IcvekkDNWCg" name="Stopped"/>
+          <subvertex xmi:type="uml:State" xmi:id="_qv3_xI5kEe2IcvekkDNWCg" name="Working"/>
+        </region>
+      </ownedBehavior>
+      <ownedOperation xmi:id="_qv2xoY5kEe2IcvekkDNWCg" name="Engine"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_qv_UgI5kEe2IcvekkDNWCg" name="Lamp" classifierBehavior="_qv_7kY5kEe2IcvekkDNWCg">
+      <ownedAttribute xmi:id="_qwV50I5kEe2IcvekkDNWCg" name="g" type="_qwJskI5kEe2IcvekkDNWCg" association="_qwVSwI5kEe2IcvekkDNWCg">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_qwV50Y5kEe2IcvekkDNWCg" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_qwV50o5kEe2IcvekkDNWCg" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_qwY9II5kEe2IcvekkDNWCg" name="e" type="_qv2xoI5kEe2IcvekkDNWCg" association="_qwYWEI5kEe2IcvekkDNWCg">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_qwY9IY5kEe2IcvekkDNWCg" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_qwY9Io5kEe2IcvekkDNWCg" value="1"/>
+      </ownedAttribute>
+      <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_qv_7kY5kEe2IcvekkDNWCg" name="Lamp">
+        <region xmi:id="_qwAioI5kEe2IcvekkDNWCg" name="Lamp">
+          <transition xmi:id="_qwAipI5kEe2IcvekkDNWCg" name="Init_Dark" source="_qwAioY5kEe2IcvekkDNWCg" target="_qwAioo5kEe2IcvekkDNWCg"/>
+          <transition xmi:id="_qwBJsI5kEe2IcvekkDNWCg" name="Dark_Light" source="_qwAioo5kEe2IcvekkDNWCg" target="_qwAio45kEe2IcvekkDNWCg">
+            <trigger xmi:id="_qwBJsY5kEe2IcvekkDNWCg" name="null_trigger" event="_qwhgAI5kEe2IcvekkDNWCg"/>
+          </transition>
+          <transition xmi:id="_qwBJso5kEe2IcvekkDNWCg" name="Light_Dark" source="_qwAio45kEe2IcvekkDNWCg" target="_qwAioo5kEe2IcvekkDNWCg">
+            <trigger xmi:id="_qwBJs45kEe2IcvekkDNWCg" name="null_trigger" event="_qwhgAI5kEe2IcvekkDNWCg"/>
+          </transition>
+          <transition xmi:id="_qwBwwI5kEe2IcvekkDNWCg" name="Light_Dark2" source="_qwAio45kEe2IcvekkDNWCg" target="_qwAioo5kEe2IcvekkDNWCg">
+            <trigger xmi:id="_qwBwwY5kEe2IcvekkDNWCg" name="null_trigger" event="_qwcngI5kEe2IcvekkDNWCg"/>
+          </transition>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_qwAioY5kEe2IcvekkDNWCg" name="Init"/>
+          <subvertex xmi:type="uml:State" xmi:id="_qwAioo5kEe2IcvekkDNWCg" name="Dark"/>
+          <subvertex xmi:type="uml:State" xmi:id="_qwAio45kEe2IcvekkDNWCg" name="Light"/>
+        </region>
+      </ownedBehavior>
+      <ownedOperation xmi:id="_qv_UgY5kEe2IcvekkDNWCg" name="Lamp"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_qwJskI5kEe2IcvekkDNWCg" name="Gearbox" classifierBehavior="_qwKToY5kEe2IcvekkDNWCg">
+      <ownedAttribute xmi:id="_qwV5045kEe2IcvekkDNWCg" name="l" type="_qv_UgI5kEe2IcvekkDNWCg" association="_qwVSwI5kEe2IcvekkDNWCg">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_qwV51I5kEe2IcvekkDNWCg" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_qwV51Y5kEe2IcvekkDNWCg" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_qwbZYo5kEe2IcvekkDNWCg" name="e" type="_qv2xoI5kEe2IcvekkDNWCg" association="_qwayUI5kEe2IcvekkDNWCg">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_qwbZY45kEe2IcvekkDNWCg" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_qwbZZI5kEe2IcvekkDNWCg" value="1"/>
+      </ownedAttribute>
+      <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_qwKToY5kEe2IcvekkDNWCg" name="Gearbox">
+        <region xmi:id="_qwKToo5kEe2IcvekkDNWCg" name="Gearbox">
+          <transition xmi:id="_qwNW8Y5kEe2IcvekkDNWCg" name="Init_Neutral" source="_qwK6sI5kEe2IcvekkDNWCg" target="_qwK6sY5kEe2IcvekkDNWCg"/>
+          <transition xmi:id="_qwNW8o5kEe2IcvekkDNWCg" name="Neutral_Forwards" source="_qwK6sY5kEe2IcvekkDNWCg" target="_qwK6so5kEe2IcvekkDNWCg">
+            <trigger xmi:id="_qwN-AI5kEe2IcvekkDNWCg" name="null_trigger" event="_qwlxcI5kEe2IcvekkDNWCg"/>
+          </transition>
+          <transition xmi:id="_qwOlEI5kEe2IcvekkDNWCg" name="Neutral_Backwards" source="_qwK6sY5kEe2IcvekkDNWCg" target="_qwMI0o5kEe2IcvekkDNWCg">
+            <trigger xmi:id="_qwPzMI5kEe2IcvekkDNWCg" name="null_trigger" event="_qwfq0Y5kEe2IcvekkDNWCg"/>
+          </transition>
+          <transition xmi:id="_qwPzMY5kEe2IcvekkDNWCg" name="Forwards_Neutral" source="_qwK6so5kEe2IcvekkDNWCg" target="_qwK6sY5kEe2IcvekkDNWCg">
+            <trigger xmi:id="_qwQaQI5kEe2IcvekkDNWCg" name="null_trigger" event="_qwfq0Y5kEe2IcvekkDNWCg"/>
+          </transition>
+          <transition xmi:id="_qwRBUI5kEe2IcvekkDNWCg" name="Backwards_Neutral" source="_qwMI0o5kEe2IcvekkDNWCg" target="_qwK6sY5kEe2IcvekkDNWCg">
+            <trigger xmi:id="_qwSPcI5kEe2IcvekkDNWCg" name="null_trigger" event="_qwlxcI5kEe2IcvekkDNWCg"/>
+          </transition>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_qwK6sI5kEe2IcvekkDNWCg" name="Init"/>
+          <subvertex xmi:type="uml:State" xmi:id="_qwK6sY5kEe2IcvekkDNWCg" name="Neutral"/>
+          <subvertex xmi:type="uml:State" xmi:id="_qwK6so5kEe2IcvekkDNWCg" name="Forwards">
+            <region xmi:id="_qwK6s45kEe2IcvekkDNWCg" name="Forwards">
+              <transition xmi:id="_qwK6t45kEe2IcvekkDNWCg" name="FInit_F1" source="_qwK6tI5kEe2IcvekkDNWCg" target="_qwK6tY5kEe2IcvekkDNWCg"/>
+              <transition xmi:id="_qwLhwI5kEe2IcvekkDNWCg" name="F1_F2" source="_qwK6tY5kEe2IcvekkDNWCg" target="_qwK6to5kEe2IcvekkDNWCg">
+                <trigger xmi:id="_qwLhwY5kEe2IcvekkDNWCg" name="null_trigger" event="_qwlxcI5kEe2IcvekkDNWCg"/>
+              </transition>
+              <transition xmi:id="_qwMI0I5kEe2IcvekkDNWCg" name="F2_F1" source="_qwK6to5kEe2IcvekkDNWCg" target="_qwK6tY5kEe2IcvekkDNWCg">
+                <trigger xmi:id="_qwMI0Y5kEe2IcvekkDNWCg" name="null_trigger" event="_qwlxcI5kEe2IcvekkDNWCg"/>
+              </transition>
+              <subvertex xmi:type="uml:Pseudostate" xmi:id="_qwK6tI5kEe2IcvekkDNWCg" name="FInit"/>
+              <subvertex xmi:type="uml:State" xmi:id="_qwK6tY5kEe2IcvekkDNWCg" name="F1"/>
+              <subvertex xmi:type="uml:State" xmi:id="_qwK6to5kEe2IcvekkDNWCg" name="F2"/>
+            </region>
+          </subvertex>
+          <subvertex xmi:type="uml:State" xmi:id="_qwMI0o5kEe2IcvekkDNWCg" name="Backwards">
+            <region xmi:id="_qwMI045kEe2IcvekkDNWCg" name="Backwards">
+              <transition xmi:id="_qwMv4I5kEe2IcvekkDNWCg" name="BInit_B1" source="_qwMI1I5kEe2IcvekkDNWCg" target="_qwMI1Y5kEe2IcvekkDNWCg"/>
+              <transition xmi:id="_qwMv4Y5kEe2IcvekkDNWCg" name="B1_B2" source="_qwMI1Y5kEe2IcvekkDNWCg" target="_qwMI1o5kEe2IcvekkDNWCg">
+                <trigger xmi:id="_qwMv4o5kEe2IcvekkDNWCg" name="null_trigger" event="_qwfq0Y5kEe2IcvekkDNWCg"/>
+              </transition>
+              <transition xmi:id="_qwMv445kEe2IcvekkDNWCg" name="B2_B1" source="_qwMI1o5kEe2IcvekkDNWCg" target="_qwMI1Y5kEe2IcvekkDNWCg">
+                <trigger xmi:id="_qwNW8I5kEe2IcvekkDNWCg" name="null_trigger" event="_qwfq0Y5kEe2IcvekkDNWCg"/>
+              </transition>
+              <subvertex xmi:type="uml:Pseudostate" xmi:id="_qwMI1I5kEe2IcvekkDNWCg" name="BInit"/>
+              <subvertex xmi:type="uml:State" xmi:id="_qwMI1Y5kEe2IcvekkDNWCg" name="B1"/>
+              <subvertex xmi:type="uml:State" xmi:id="_qwMI1o5kEe2IcvekkDNWCg" name="B2"/>
+            </region>
+          </subvertex>
+        </region>
+      </ownedBehavior>
+      <ownedOperation xmi:id="_qwJskY5kEe2IcvekkDNWCg" name="startEngineOp" visibility="public"/>
+      <ownedOperation xmi:id="_qwJsko5kEe2IcvekkDNWCg" name="Gearbox"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_qwbZZY5kEe2IcvekkDNWCg" name="signals">
+      <packagedElement xmi:type="uml:Signal" xmi:id="_qwcAcI5kEe2IcvekkDNWCg" name="LightOff"/>
+      <packagedElement xmi:type="uml:SignalEvent" xmi:id="_qwcngI5kEe2IcvekkDNWCg" name="LightOff" signal="_qwcAcI5kEe2IcvekkDNWCg"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_qwcngY5kEe2IcvekkDNWCg" name="#LightOff_factory">
+        <ownedBehavior xmi:type="uml:Activity" xmi:id="_qwdOkY5kEe2IcvekkDNWCg" name="LightOff" specification="_qwcngo5kEe2IcvekkDNWCg"/>
+        <ownedOperation xmi:id="_qwcngo5kEe2IcvekkDNWCg" name="LightOff" isStatic="true" method="_qwdOkY5kEe2IcvekkDNWCg">
+          <ownedParameter xmi:id="_qwdOkI5kEe2IcvekkDNWCg" name="signal" type="_qwcAcI5kEe2IcvekkDNWCg"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Signal" xmi:id="_qwd1oI5kEe2IcvekkDNWCg" name="EngineOn"/>
+      <packagedElement xmi:type="uml:SignalEvent" xmi:id="_qwd1oY5kEe2IcvekkDNWCg" name="EngineOn" signal="_qwd1oI5kEe2IcvekkDNWCg"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_qwecsI5kEe2IcvekkDNWCg" name="#EngineOn_factory">
+        <ownedBehavior xmi:type="uml:Activity" xmi:id="_qwfDwY5kEe2IcvekkDNWCg" name="EngineOn" specification="_qwecsY5kEe2IcvekkDNWCg"/>
+        <ownedOperation xmi:id="_qwecsY5kEe2IcvekkDNWCg" name="EngineOn" isStatic="true" method="_qwfDwY5kEe2IcvekkDNWCg">
+          <ownedParameter xmi:id="_qwfDwI5kEe2IcvekkDNWCg" name="signal" type="_qwd1oI5kEe2IcvekkDNWCg"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Signal" xmi:id="_qwfq0I5kEe2IcvekkDNWCg" name="Backward"/>
+      <packagedElement xmi:type="uml:SignalEvent" xmi:id="_qwfq0Y5kEe2IcvekkDNWCg" name="Backward" signal="_qwfq0I5kEe2IcvekkDNWCg"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_qwfq0o5kEe2IcvekkDNWCg" name="#Backward_factory">
+        <ownedBehavior xmi:type="uml:Activity" xmi:id="_qwgR445kEe2IcvekkDNWCg" name="Backward" specification="_qwgR4I5kEe2IcvekkDNWCg"/>
+        <ownedOperation xmi:id="_qwgR4I5kEe2IcvekkDNWCg" name="Backward" isStatic="true" method="_qwgR445kEe2IcvekkDNWCg">
+          <ownedParameter xmi:id="_qwgR4o5kEe2IcvekkDNWCg" name="signal" type="_qwfq0I5kEe2IcvekkDNWCg"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Signal" xmi:id="_qwg48I5kEe2IcvekkDNWCg" name="SwitchLight"/>
+      <packagedElement xmi:type="uml:SignalEvent" xmi:id="_qwhgAI5kEe2IcvekkDNWCg" name="SwitchLight" signal="_qwg48I5kEe2IcvekkDNWCg"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_qwhgAY5kEe2IcvekkDNWCg" name="#SwitchLight_factory">
+        <ownedBehavior xmi:type="uml:Activity" xmi:id="_qwiuII5kEe2IcvekkDNWCg" name="SwitchLight" specification="_qwhgAo5kEe2IcvekkDNWCg"/>
+        <ownedOperation xmi:id="_qwhgAo5kEe2IcvekkDNWCg" name="SwitchLight" isStatic="true" method="_qwiuII5kEe2IcvekkDNWCg">
+          <ownedParameter xmi:id="_qwiHEI5kEe2IcvekkDNWCg" name="signal" type="_qwg48I5kEe2IcvekkDNWCg"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Signal" xmi:id="_qwj8QI5kEe2IcvekkDNWCg" name="EngineOff"/>
+      <packagedElement xmi:type="uml:SignalEvent" xmi:id="_qwj8QY5kEe2IcvekkDNWCg" name="EngineOff" signal="_qwj8QI5kEe2IcvekkDNWCg"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_qwj8Qo5kEe2IcvekkDNWCg" name="#EngineOff_factory">
+        <ownedBehavior xmi:type="uml:Activity" xmi:id="_qwkjUY5kEe2IcvekkDNWCg" name="EngineOff" specification="_qwj8Q45kEe2IcvekkDNWCg"/>
+        <ownedOperation xmi:id="_qwj8Q45kEe2IcvekkDNWCg" name="EngineOff" isStatic="true" method="_qwkjUY5kEe2IcvekkDNWCg">
+          <ownedParameter xmi:id="_qwkjUI5kEe2IcvekkDNWCg" name="signal" type="_qwj8QI5kEe2IcvekkDNWCg"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Signal" xmi:id="_qwlKYI5kEe2IcvekkDNWCg" name="Forward"/>
+      <packagedElement xmi:type="uml:SignalEvent" xmi:id="_qwlxcI5kEe2IcvekkDNWCg" name="Forward" signal="_qwlKYI5kEe2IcvekkDNWCg"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_qwlxcY5kEe2IcvekkDNWCg" name="#Forward_factory">
+        <ownedBehavior xmi:type="uml:Activity" xmi:id="_qwlxdY5kEe2IcvekkDNWCg" name="Forward" specification="_qwlxco5kEe2IcvekkDNWCg"/>
+        <ownedOperation xmi:id="_qwlxco5kEe2IcvekkDNWCg" name="Forward" isStatic="true" method="_qwlxdY5kEe2IcvekkDNWCg">
+          <ownedParameter xmi:id="_qwlxdI5kEe2IcvekkDNWCg" name="signal" type="_qwlKYI5kEe2IcvekkDNWCg"/>
+        </ownedOperation>
+      </packagedElement>
+    </packagedElement>
+    <profileApplication xmi:id="_qtqZQI5kEe2IcvekkDNWCg">
+      <eAnnotations xmi:id="_qtrAUI5kEe2IcvekkDNWCg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard#/"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+    </profileApplication>
+  </uml:Model>
+  <standard:Create xmi:id="_qv3YsI5kEe2IcvekkDNWCg" base_BehavioralFeature="_qv2xoY5kEe2IcvekkDNWCg"/>
+  <standard:Create xmi:id="_qv_7kI5kEe2IcvekkDNWCg" base_BehavioralFeature="_qv_UgY5kEe2IcvekkDNWCg"/>
+  <standard:Create xmi:id="_qwKToI5kEe2IcvekkDNWCg" base_BehavioralFeature="_qwJsko5kEe2IcvekkDNWCg"/>
+  <standard:Create xmi:id="_qwcng45kEe2IcvekkDNWCg" base_BehavioralFeature="_qwcngo5kEe2IcvekkDNWCg"/>
+  <standard:Create xmi:id="_qwecso5kEe2IcvekkDNWCg" base_BehavioralFeature="_qwecsY5kEe2IcvekkDNWCg"/>
+  <standard:Create xmi:id="_qwgR4Y5kEe2IcvekkDNWCg" base_BehavioralFeature="_qwgR4I5kEe2IcvekkDNWCg"/>
+  <standard:Create xmi:id="_qwhgA45kEe2IcvekkDNWCg" base_BehavioralFeature="_qwhgAo5kEe2IcvekkDNWCg"/>
+  <standard:Create xmi:id="_qwj8RI5kEe2IcvekkDNWCg" base_BehavioralFeature="_qwj8Q45kEe2IcvekkDNWCg"/>
+  <standard:Create xmi:id="_qwlxc45kEe2IcvekkDNWCg" base_BehavioralFeature="_qwlxco5kEe2IcvekkDNWCg"/>
+</xmi:XMI>
